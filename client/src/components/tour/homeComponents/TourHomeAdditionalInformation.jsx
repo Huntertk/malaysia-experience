@@ -1,10 +1,10 @@
 import '../../../styles/tourHomeAdditionalInformation.scss';
 import TourHomeQuestionContainer from './TourHomeQuestionContainer';
 
-const TourHomeAdditionalInformation = ({quesData}) => {
+const TourHomeAdditionalInformation = ({quesData, title}) => {
   return (
     <section className='homeFAQMainContainer'>
-            <h1>Additional Information</h1>
+            <h1>{title}</h1>
         <div className="questionMainContainer">
             {
                 quesData.map((data) => {

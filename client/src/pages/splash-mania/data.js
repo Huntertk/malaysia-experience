@@ -177,3 +177,38 @@ export const splashManiaAdditionInfoData = [
         ans:["Upon arrival, show your ticket/e-voucher at the counter"]
     },
 ]
+
+
+//FAQ
+export const splashManiaTourHomeFAQ = [
+    {
+        id: nanoid(),
+        ques:"When does Splash Mania close ?",
+        ans:["Splash Mania Waterpark is close every Wednesday except Public Holiday and School Holiday."]
+    },
+    {
+        id: nanoid(),
+        ques:"How long should I plan for Splash Mania?",
+        ans:["You can enjoy all rides unlimitedly within the time frame 10am to 6pm."]
+    },
+    {
+        id: nanoid(),
+        ques:"Can I bring mineral water on my own?",
+        ans:["No. Outside food and water not allowed."]
+    },
+    {
+        id: nanoid(),
+        ques:"Does my ticket includes Locker and Tubes?",
+        ans:["No, its not included, but there are stations everywhere inside the park where guest may rent the items needed."]
+    },
+    {
+        id: nanoid(),
+        ques:"What are the games includes in my tickets",
+        ans:["All games in the park except pay-per-rides like SurfMania, Zoomi's Runaway and Sky Leap."]
+    },
+    {
+        id: nanoid(),
+        ques:"If my child is more than 120cm, can i buy Child Ticket ?",
+        ans:["No Child above 120cm will be considered as adult."]
+    },
+]

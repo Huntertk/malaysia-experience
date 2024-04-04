@@ -159,3 +159,27 @@ export const arasResturantAdditionInfoData = [
         ans:["Upon arrival, show your ticket/e-voucher at the counter."]
     },
 ]
+
+//FAQ
+export const arasResturantTourHomeFAQ = [
+    {
+        id: nanoid(),
+        ques:"Should I make an advance reservation for ARAS Restaurant KL Tower ?",
+        ans:["Highly Recommended, advance reservations are welcome to confirm your preferred dining slot."]
+    },
+    {
+        id: nanoid(),
+        ques:"How Can I request a window table at ARAS Restaurant KL Tower ?",
+        ans:["Yes, you can request window Table during reservation/booking with extra charges."]
+    },
+    {
+        id: nanoid(),
+        ques:"What is dress code for guest at ARAS Restaurant KL Tower ?",
+        ans:["Recommended smart casual attire and no sandals allowed."]
+    },
+    {
+        id: nanoid(),
+        ques:"The best time to visit ARAS Restaurant KL Tower ?",
+        ans:["The Dinner dining will be ideal to witness the City of Light."]
+    },
+]
