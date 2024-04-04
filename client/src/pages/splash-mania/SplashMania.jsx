@@ -1,12 +1,13 @@
 import { 
   TourHomeCardContainer, 
+  TourHomeHighlights, 
   TourHomeThingToDo, 
   TourHomeTopContainer, 
   TourWhyVisit
 } from '../../components';
 import '../../styles/tourHome.scss';
 import {Helmet} from "react-helmet";
-import { splashManiaCardData, splashManiaThingsToDoData, splashmaniaWhyVistData } from './data';
+import { splashManiaCardData, splashManiaHighlighhtsData, splashManiaThingsToDoData, splashmaniaWhyVistData } from './data';
 
 const SplashMania = () => {
   return (
@@ -28,6 +29,12 @@ const SplashMania = () => {
         serviceName={"Splash Mania"}
       />
       <TourHomeThingToDo thingsToDoData={splashManiaThingsToDoData} serviceName={"Splash Mania"} />
+
+      <TourHomeHighlights 
+        serviceName={"Splash Mania"} 
+        highlightsData={splashManiaHighlighhtsData}
+        title={"Splash Mania"}
+      />
      </section>
     </>
   )

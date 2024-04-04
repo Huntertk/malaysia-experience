@@ -1,11 +1,10 @@
 
-const TourHomeCardDetails = ({cardData}) => {
+const TourHomeCardHighlightsDetails = ({cardData, title}) => {
     return  (
         cardData.map((data) => {
             return <div className="card" key={data.id}>
-                <img src={data.image} alt={data.title} />
+                <img src={data.image} alt={title} />
                 <div className="content">
-                    <h3>{data.title}</h3>
                     <p>{data.desc}</p>
                 </div>
             </div>
@@ -13,4 +12,4 @@ const TourHomeCardDetails = ({cardData}) => {
     )
 }
 
-export default TourHomeCardDetails
+export default TourHomeCardHighlightsDetails

@@ -117,3 +117,28 @@ export const splashManiaThingsToDoData = [
         desc:"Feel the adrenaline rush with a sudden descent from the summit, plunging into curving high-speed body slides."
     },
 ]
+
+
+//Highlights
+export const splashManiaHighlighhtsData = [
+    {
+        id: nanoid(),
+        desc:" Embark on an adventure and experience the excitement of 29 pulse-pounding water slides and 15 additional attractions, including the Lazy River, Family Raft Ride, Master Blaster Splash Pad, and many more.",
+        image: "https://i.postimg.cc/L8xSc0rf/gallery-desktop-7.png"
+    },
+    {
+        id: nanoid(),
+        desc:"Indulge in exhilarating moments with your loved ones as you explore 39 thrilling water slides and rides at Splash Mania waterpark.",
+        image: "https://i.postimg.cc/D0GyFdqh/FB-IMG-1675571108280.jpg"
+    },
+    {
+        id: nanoid(),
+        desc:"Immerse yourself in the enclosed Shaka Waka tube slide, where you can encounter breathtaking lighting and audio effects for a truly spectacular experience.",
+        image: "https://i.postimg.cc/15PZfQSw/Splash-Mania-Waterpark-Ticketin-Gamuda-Cove-Selangor-Klook-Malaysia.jpg"
+    },
+    {
+        id: nanoid(),
+        desc:" Embark on the ultimate aquatic escapade while tackling the massive waves of the wave pool.",
+        image: "https://i.postimg.cc/fRfyJK1T/FB-IMG-1672326776017.jpg"
+    },
+]
