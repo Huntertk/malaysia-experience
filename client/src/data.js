@@ -5,51 +5,33 @@ import { nanoid } from 'nanoid';
 export const homeProductData = [
     {
         id:nanoid(),
-        title:"French Autum",
-        image: "https://i.postimg.cc/xC3rkW9w/pexels-pixabay-532826.jpg",
-        tourPlace:"City Tours",
-        country:"France",
-        duration:"5 days"
+        title:"Splash Mania Waterpark",
+        image: "https://i.postimg.cc/L8xSc0rf/gallery-desktop-7.png",
+        tourPlace:"Gamuda Cove Selangor",
     },
     {
         id:nanoid(),
-        title:"Grand Switzerland",
-        image: "https://i.postimg.cc/1RMhyhC6/pexels-ketan-kumawat-724948.jpg",
-        tourPlace:"Mountain, Snow & Ice",
-        country:"Switzerland",
-        duration:"6 days"
+        title:"Aras Resturant",
+        image: "https://i.postimg.cc/kGVntc0R/9.jpg",
+        tourPlace:"KL Tower",
     },
     {
         id:nanoid(),
-        title:"Discover Japan",
-        image: "https://i.postimg.cc/j2xpyZ5L/pexels-belle-co-402028.jpg",
-        tourPlace:"City Tour",
-        country:"Japan",
-        duration:"5 days"
+        title:"Berjaya Times Square",
+        image: "https://i.postimg.cc/ZnkNfVrp/free-fall.jpg",
+        tourPlace:"Jln Imbi",
     },
     {
         id:nanoid(),
-        title:"Hong Kong",
-        image: "https://i.postimg.cc/HxgDkp10/pexels-jimmy-chan-2537536.jpg",
-        tourPlace:"Iconic, City Tour",
-        country:"Hong Kong",
-        duration:"8 hours"
+        title:"Desaru Waterpark",
+        image: "https://i.postimg.cc/7Yzf7K7g/13.jpg",
+        tourPlace:"Bandar Penawari",
     },
     {
         id:nanoid(),
-        title:"Great Britain Travel",
-        image: "https://i.postimg.cc/7hKp90GX/pexels-oltion-bregu-338454.jpg",
-        tourPlace:"City Tour",
-        country:"London",
-        duration:"5 days"
-    },
-    {
-        id:nanoid(),
-        title:"Prague Trip",
-        image: "https://i.postimg.cc/8P585K9Y/pexels-pixabay-161077.jpg",
-        tourPlace:"City Tour, History Park",
-        country:"Czech Republic",
-        duration:"5 days"
+        title:"Legoland",
+        image: "https://i.postimg.cc/SxPMcMX2/Legoland-Ticket-Johor-Bahru-Malaysia-Klook-United-States.jpg",
+        tourPlace:"Iskandar Puteri",
     },
 ]
 
@@ -66,7 +48,7 @@ export const homeImgViwerData = [
     },
     {
         id: nanoid(),
-        img: 'https://i.postimg.cc/C16zCtm4/12.jpg',
+        img: 'https://i.postimg.cc/7Yzf7K7g/13.jpg',
         title: "Desaru Waterpark"
     },
     {
@@ -89,7 +71,7 @@ export const homeToursData = [
     },
     {
         id: nanoid(),
-        img: 'https://i.postimg.cc/C16zCtm4/12.jpg',
+        img: 'https://i.postimg.cc/7Yzf7K7g/13.jpg',
         title: "Desaru Waterpark"
     },
     {

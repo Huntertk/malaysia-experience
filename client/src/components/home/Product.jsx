@@ -24,13 +24,8 @@ const Product = ({data}) => {
       <div className="productContent">
         <h1>{data.title}</h1>
         <p>{data.tourPlace}</p>
-        <p>{data.country}</p>
         <div className="buttonContainer">
           <button>View Details</button>
-          <div className="duration">
-            <CiStopwatch />
-          <p> {data.duration}</p>
-          </div>
         </div>
       </div>
     </motion.div>
