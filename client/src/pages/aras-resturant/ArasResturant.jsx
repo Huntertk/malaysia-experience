@@ -1,4 +1,5 @@
-import { TourHomeTopContainer } from '../../components';
+import { TourHomeCardContainer, TourHomeTopContainer } from '../../components';
+import { arasResturantCardData } from '../../data';
 import '../../styles/tourHome.scss';
 import {Helmet} from "react-helmet";
 
@@ -16,6 +17,7 @@ const ArasResturant = () => {
           desc={"Travelvago is an authorized and trusted partner of the venue, offering curated experiences to enjoy this attraction."}
           imgUrl={"https://i.postimg.cc/gcVBqRKf/17.jpg"}
           />
+       <TourHomeCardContainer cardData={arasResturantCardData}  />   
      </section>
     </>
   )

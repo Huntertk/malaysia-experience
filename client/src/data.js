@@ -52,6 +52,55 @@ export const splashManiaCardData = [
     },
 ]
 
+export const arasResturantCardData = [
+    {
+        _id: nanoid(),
+        image:[
+            "https://i.postimg.cc/5yggcB7y/IMG-20240129-WA0076.jpg",
+            "https://i.postimg.cc/VkGh08Fv/9.jpg",
+            "https://i.postimg.cc/bvZBQB6T/8.jpg",
+            "https://i.postimg.cc/MHq5rPYg/IMG-20240129-WA0075.jpg",
+        ],
+        title:"Ticket to Aras Resturant",
+        desc:"Make your special occasions more memorable by booking a window seat view and opting for the celebration setup, whole cake, and a flower bouquet.",
+        type:"bookTypeOne",
+        service:"aras-resturant",
+        preference:[
+            {
+                title:"Malaysian",
+                price:{
+                    adult:240,
+                    child:142,
+                    senior:142,
+                },
+                details:[
+                    "Valid only for Malaysian Citizens"
+                ]
+            },
+            {
+                title:"Non-Malaysian",
+                price:{
+                    adult:240,
+                    child:142,
+                    senior:142,
+                },
+                details:[
+                    "Valid only for Non Malaysian Citizens"
+                ]
+            }
+        ],
+        inclusionAndExclusion:{
+            cancellationPolicy:["These tickets can't be cancelled or rescheduled"],
+            inclusion:["Entrance Tickets for Buffet Dinner"],
+            exclusion:[
+                "Parking",
+                "Food and Drink",
+                "Locker"
+            ]
+        }
+    },
+]
+
 
 export const homeProductData = [
     {
