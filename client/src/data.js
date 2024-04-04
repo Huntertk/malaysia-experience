@@ -1,19 +1,5 @@
 import { nanoid } from 'nanoid';
 
-//Home Image Slider Images
-import iceland from './assets/images/iceland.jpg';
-import malaysia from './assets/images/malaysia.jpg';
-import singapore from './assets/images/singapore.jpg';
-import thailand from './assets/images/thailand.jpg';
-
-
-//Home Country Images
-import northAmeraicaImg from './assets/images/country/north-america.jpg';
-import southAmeraicaImg from './assets/images/country/south-america.jpg';
-import europeImg from './assets/images/country/europe.jpg';
-import africaImg from './assets/images/country/africa.jpg';
-import asiaImg from './assets/images/country/asia.jpg';
-import australiaImg from './assets/images/country/australia.jpg';
 
 
 export const homeProductData = [
@@ -70,86 +56,52 @@ export const homeProductData = [
 export const homeImgViwerData = [
     {
         id: nanoid(),
-        img:iceland,
-        title: "Iceland"
+        img:"https://i.postimg.cc/kGVntc0R/9.jpg",
+        title: "ArasResturant"
     },
     {
         id: nanoid(),
-        img:malaysia,
-        title: "Malaysia"
+        img:"https://i.postimg.cc/ZnkNfVrp/free-fall.jpg",
+        title: "BerjayaTimes Square"
     },
     {
         id: nanoid(),
-        img:singapore,
-        title: "Singapore"
+        img: 'https://i.postimg.cc/C16zCtm4/12.jpg',
+        title: "Desaru Waterpark"
     },
     {
         id: nanoid(),
-        img:thailand,
-        title: "Thailand"
-    },
-    {
-        id: nanoid(),
-        img:northAmeraicaImg,
-        title: "NorthAmerica"
-    },
-    {
-        id: nanoid(),
-        img: southAmeraicaImg,
-        title: "SouthAmerica"
-    },
-    {
-        id: nanoid(),
-        img: europeImg,
-        title: "Europe"
-    },
-    {
-        id: nanoid(),
-        img: asiaImg,
-        title: "Asia"
-    },
-    {
-        id: nanoid(),
-        img: africaImg,
-        title: "Africa"
-    },
-    {
-        id: nanoid(),
-        img: australiaImg,
-        title: "Australia"
+        img: 'https://i.postimg.cc/SxPMcMX2/Legoland-Ticket-Johor-Bahru-Malaysia-Klook-United-States.jpg',
+        title: "Legoland"
     },
 ]
 
-export const homeCountryData = [
+export const homeToursData = [
     {
         id: nanoid(),
-        img: northAmeraicaImg,
-        title: "NorthAmerica"
+        img: 'https://i.postimg.cc/kGVntc0R/9.jpg',
+        title: "ArasResturant"
     },
     {
         id: nanoid(),
-        img: southAmeraicaImg,
-        title: "SouthAmerica"
+        img: 'https://i.postimg.cc/ZnkNfVrp/free-fall.jpg',
+        title: "BerjayaTimes Square"
     },
     {
         id: nanoid(),
-        img: europeImg,
-        title: "Europe"
+        img: 'https://i.postimg.cc/C16zCtm4/12.jpg',
+        title: "Desaru Waterpark"
     },
     {
         id: nanoid(),
-        img: asiaImg,
-        title: "Asia"
+        img: 'https://i.postimg.cc/SxPMcMX2/Legoland-Ticket-Johor-Bahru-Malaysia-Klook-United-States.jpg',
+        title: "Legoland"
     },
     {
         id: nanoid(),
-        img: africaImg,
-        title: "Africa"
+        img: 'https://i.postimg.cc/9MVQw7n5/FB-IMG-1672326765049.jpg',
+        title: "SplashMania WaterPark"
     },
-    {
-        id: nanoid(),
-        img: australiaImg,
-        title: "Australia"
-    },
+
 
 ]
