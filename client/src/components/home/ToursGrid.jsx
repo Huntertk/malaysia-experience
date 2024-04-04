@@ -24,7 +24,7 @@ const ToursGrid = ({data}) => {
                         className="gridItem" 
                         key={tour.id}
                         {...easeScaleUp}
-                        onClick={() => navigate(`${tour.link}`)}
+                        onClick={() => navigate(`/${tour.slug}`)}
                     >
                         <img src={tour.img} alt={tour.title} />
                         <h1>{tour.title}</h1>

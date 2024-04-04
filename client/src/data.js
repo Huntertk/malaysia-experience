@@ -39,7 +39,16 @@ export const splashManiaCardData = [
                     "Valid only for Non Malaysian Citizens"
                 ]
             }
-        ]
+        ],
+        inclusionAndExclusion:{
+            cancellationPolicy:["These tickets can't be cancelled or rescheduled"],
+            inclusion:["Entrance Tickets"],
+            exclusion:[
+                "Parking",
+                "Food and Drink",
+                "Locker"
+            ]
+        }
     },
 ]
 
@@ -105,31 +114,31 @@ export const homeToursData = [
         id: nanoid(),
         img: 'https://i.postimg.cc/kGVntc0R/9.jpg',
         title: "ArasResturant",
-        link:"/aras-resturant"
+        slug:"aras-resturant"
     },
     {
         id: nanoid(),
         img: 'https://i.postimg.cc/ZnkNfVrp/free-fall.jpg',
         title: "BerjayaTimes Square",
-        link:"/berjaya-times-square"
+        slug:"berjaya-times-square"
     },
     {
         id: nanoid(),
         img: 'https://i.postimg.cc/7Yzf7K7g/13.jpg',
         title: "Desaru Waterpark",
-        link:"/desaru-waterpark"
+        slug:"desaru-waterpark"
     },
     {
         id: nanoid(),
         img: 'https://i.postimg.cc/SxPMcMX2/Legoland-Ticket-Johor-Bahru-Malaysia-Klook-United-States.jpg',
         title: "Legoland",
-        link:"/legoland"
+        slug:"legoland"
     },
     {
         id: nanoid(),
         img: 'https://i.postimg.cc/9MVQw7n5/FB-IMG-1672326765049.jpg',
         title: "SplashMania WaterPark",
-        link:"/splash-maina"
+        slug:"splash-mania"
     },
 
 

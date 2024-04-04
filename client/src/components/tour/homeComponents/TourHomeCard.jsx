@@ -4,7 +4,7 @@ import ImageViewerContainer from './ImageViewerContainer';
 import {motion} from 'framer-motion';
 
 const TourHomeCard = ({data}) => {
-    const {image, id, title, desc, type, pricing, preference} = data;
+    const {image, id, title, desc, type, pricing, preference, inclusionAndExclusion} = data;
 
     const [imgViewer, setImageViwer] = useState(false)
     const easeScaleUp = {
@@ -41,7 +41,7 @@ const TourHomeCard = ({data}) => {
                 </button>
             </div>
             <div className="extra">
-                <TourHomeWhatsIncluded />
+                <TourHomeWhatsIncluded inclusionAndExclusion={inclusionAndExclusion} />
             </div>
         </motion.div>
     </>
