@@ -15,7 +15,7 @@ const App = () => {
               <Route path='/' element={<Home />} />
             </Route>
             <Route element={<TourLayout />}>
-              <Route path='/:tourname' element={<SplashMania />} />
+              <Route path='/splash-maina' element={<SplashMania />} />
             </Route>
             <Route path='*' element={<h1>Page Not Found</h1>} />
         </Routes>

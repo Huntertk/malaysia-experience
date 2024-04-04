@@ -1,7 +1,5 @@
 import logo from '../../assets/images/logo.png';
 import '../../styles/tourFooter.scss';
-import {BsFacebook, BsInstagram, BsTwitter} from 'react-icons/bs'
-import {FaXTwitter} from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 
 const TourFooter = () => {
@@ -31,12 +29,6 @@ const TourFooter = () => {
                     </Link>
                     <Link to="/admin/login"><p>Admin</p></Link>
                 </div>
-            </div>
-            <div className="icons">
-                <BsFacebook />
-                <FaXTwitter />
-                <BsInstagram />
-
             </div>
         </div>
     </section>
