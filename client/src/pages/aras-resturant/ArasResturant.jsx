@@ -1,5 +1,5 @@
 import { TourHomeCardContainer, TourHomeTopContainer, TourWhyVisit } from '../../components';
-import { arasResturantCardData, arasResturantWhyVistData } from '../../data';
+import { arasResturantCardData, arasResturantWhyVistData } from './data';
 import '../../styles/tourHome.scss';
 import {Helmet} from "react-helmet";
 

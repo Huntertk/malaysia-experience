@@ -1,0 +1,119 @@
+import { nanoid } from 'nanoid';
+
+
+//Booking Card Data
+export const splashManiaCardData = [
+    {
+        _id: nanoid(),
+        image:[
+            "https://i.postimg.cc/htdDCsFR/splashmania-newtagline-2022-2.png",
+            "https://i.postimg.cc/6688YC4Y/FB-IMG-1672326767007.jpg",
+            "https://i.postimg.cc/v8CcjDWM/FB-IMG-1672326769274.jpg",
+            "https://i.postimg.cc/hPxfqgrm/FB-IMG-1672326773605.jpg",
+            "https://i.postimg.cc/fRfyJK1T/FB-IMG-1672326776017.jpg",
+            "https://i.postimg.cc/3ww8WHgn/FB-IMG-1675571092838.jpg",
+            "https://i.postimg.cc/Jzx71hBs/FB-IMG-1675571102131.jpg"
+        ],
+        title:"Ticket to Spalash Mania Waterpark at Gamuda Cove Selangor",
+        desc:"Experience the ultimate thrills with your loved ones on 39 exciting water slides and rides at SplashMania waterpark.",
+        type:"bookTypeOne",
+        service:"splash-mania",
+        preference:[
+            {
+                title:"Malaysian",
+                price:{
+                    adult:103,
+                    child:85,
+                    senior:85,
+                },
+                details:[
+                    "Valid only for Malaysian Citizens"
+                ]
+            },
+            {
+                title:"Non-Malaysian",
+                price:{
+                    adult:103,
+                    child:85,
+                    senior:85,
+                },
+                details:[
+                    "Valid only for Non Malaysian Citizens"
+                ]
+            }
+        ],
+        inclusionAndExclusion:{
+            cancellationPolicy:["These tickets can't be cancelled or rescheduled"],
+            inclusion:["Entrance Tickets"],
+            exclusion:[
+                "Parking",
+                "Food and Drink",
+                "Locker"
+            ]
+        }
+    },
+]
+
+//Why Visit
+export const splashmaniaWhyVistData = [
+    {
+        id: nanoid(),
+        title: "Treasure Tower",
+        desc:"A colossal slide combination that seamlessly merges multiple flumes and splash buckets for an exhilarating experience.",
+        imgUrl:"https://i.postimg.cc/vHNs5xSx/14-Treasure-Tower-2023-01-27-041251-xgwt-removebg-preview.png"
+    },
+    {
+        id: nanoid(),
+        title: "Splash Sploosh",
+        desc:"An engaging water fountain splash pad designed for enjoyment by both kids and adults alike.",
+        imgUrl:"https://i.postimg.cc/sgGRmft6/23-Splash-Sploosh-2023-01-27-041654-oyas-removebg-preview.png"
+    },
+    {
+        id: nanoid(),
+        title: "Ravage River",
+        desc:"Embark on a journey through diverse ride elements with attractions like Savage Ravage, Secret Lair, Donut Rapids, Bubbly Dip, Monsoon, Pinnacle Creek, Rain Shooters, Happy Feet, and the Wave Ball Pool.",
+        imgUrl:"https://i.postimg.cc/QMLZyGDX/15-Ravage-River-removebg-preview.png"
+    },
+    {
+        id: nanoid(),
+        title: "Meet and Greet",
+        desc:"In line with Splash Mania's rainforest theme, these mascots were selected as some of the most remarkable and majestic creatures inhabiting the rainforest terrain.",
+        imgUrl:"https://i.postimg.cc/JhbCw67j/pasd-removebg-preview.png"
+    },
+]
+
+
+
+//Things to do
+export const splashManiaThingsToDoData = [
+    {
+        id: nanoid(),
+        image: "https://i.postimg.cc/PqGPRbp9/WhatsApp_Image_2023-12-05_at_09.31.13_fcuvlf.jpg",
+        title:"Twista",
+        desc:"Indulge in excitement as you navigate a high-speed slide, spiraling through a bowl before the exhilarating release."
+    },
+    {
+        id: nanoid(),
+        image: "https://i.postimg.cc/bwSZgVJ1/WhatsApp_Image_2023-12-05_at_09.31.31_ihv9uc.jpg",
+        title:"Monsta",
+        desc:"Embark on an exhilarating adventure as you zoom down a high-speed slide, spinning within a bowl before the thrilling release."
+    },
+    {
+        id: nanoid(),
+        image: "https://i.postimg.cc/zfnVZLTB/WhatsApp_Image_2023-12-05_at_09.32.16_z5zder.jpg",
+        title:"Maniac Racers",
+        desc:"Compete against your friends on this multi-flume slide that enables you to race and drift while keeping an eye on your companions."
+    },
+    {
+        id: nanoid(),
+        image: "https://i.postimg.cc/Nfzy1vgg/Whats-App-Image-2023-12-05-at-09-32-32-sw-jxwr.jpg",
+        title:"Wild Rush",
+        desc:"A timeless, iconic water slides featuring exhilarating twists and 360-degree loops."
+    },
+    {
+        id: nanoid(),
+        image: "https://i.postimg.cc/SskjyyGG/WhatsApp_Image_2023-12-05_at_09.31.44_pyeu2e.jpg",
+        title:"Sumaumeira Drop",
+        desc:"Feel the adrenaline rush with a sudden descent from the summit, plunging into curving high-speed body slides."
+    },
+]
