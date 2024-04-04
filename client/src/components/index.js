@@ -9,7 +9,7 @@ import TourHomeCardContainer from "./tour/homeComponents/TourHomeCardContainer";
 import TourWhyVisit from "./tour/homeComponents/TourWhyVisit";
 import TourHomeThingToDo from "./tour/homeComponents/TourHomeThingToDo";
 import TourHomeHighlights from "./tour/homeComponents/TourHomeHighlights";
-
+import TourHomeAdditionalInformation from "./tour/homeComponents/TourHomeAdditionalInformation";
 
 export {
     ImageSlider,
@@ -22,5 +22,6 @@ export {
     TourHomeCardContainer,
     TourWhyVisit,
     TourHomeThingToDo,
-    TourHomeHighlights
+    TourHomeHighlights,
+    TourHomeAdditionalInformation
 }

@@ -1,5 +1,18 @@
-import { TourHomeCardContainer, TourHomeHighlights, TourHomeTopContainer, TourWhyVisit } from '../../components';
-import { arasResturantCardData, arasResturantHighlighhtsData, arasResturantWhyVistData } from './data';
+import { 
+  TourHomeAdditionalInformation, 
+  TourHomeCardContainer, 
+  TourHomeHighlights, 
+  TourHomeTopContainer, 
+  TourWhyVisit 
+} from '../../components';
+
+import { 
+  arasResturantAdditionInfoData, 
+  arasResturantCardData, 
+  arasResturantHighlighhtsData, 
+  arasResturantWhyVistData 
+} from './data';
+
 import '../../styles/tourHome.scss';
 import {Helmet} from "react-helmet";
 
@@ -29,6 +42,9 @@ const ArasResturant = () => {
         highlightsData={arasResturantHighlighhtsData}
         title={"Aras Resturant"}
       />
+
+      <TourHomeAdditionalInformation quesData={arasResturantAdditionInfoData} />
+
      </section>
     </>
   )

@@ -111,3 +111,51 @@ export const arasResturantHighlighhtsData = [
         image: "https://i.postimg.cc/8PG9qw5p/15.jpg"
     },
 ]
+
+
+//Additional Information
+
+export const arasResturantAdditionInfoData = [
+    {
+        id: nanoid(),
+        ques:"Child Policy",
+        ans:[
+            "Adult: 13 to 59 years old",
+            "Child: 5 to 12 years old",
+            "Senior citizen: 60 years old and above",
+            "Child below 5 years old FREE"
+        ]
+    },
+    {
+        id: nanoid(),
+        ques:"Operating Hours ?",
+        ans:[
+            "Hi-Tea: 3pm to 5:30pm",
+            "Dinner: 6:30pm to 10pm"
+        ]
+    },
+    {
+        id: nanoid(),
+        ques:"Important Information",
+        ans:[
+            "Shorts and Slippers are prohibited.",
+            "Recommend to make advanced reservations to confirm your preferred dining slot.",
+            "Consider upgrading to window seat for better sky view(Subject to availability).",
+            "Observe decorum and follow staff instruction for a pleasant visit.",
+            "Remark about any dietary restrictions or allergies during booking.",
+            "This is a Halal certified restaurant. Kindly take note, it is not suitable for Vegetarians as they serve Chickens, Eggs, Seafood and Meats"
+        ]
+    },
+    {
+        id: nanoid(),
+        ques:"Refund/Cancellation Policy",
+        ans:[
+            "No cancellation and refund are allowed once purchased."
+        ]
+    },
+    {
+        id: nanoid(),
+        ques:"Redemption Guide",
+        ans:["Upon arrival, show your ticket/e-voucher at the counter."]
+    },
+]

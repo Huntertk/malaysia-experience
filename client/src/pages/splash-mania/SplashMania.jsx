@@ -1,4 +1,5 @@
 import { 
+  TourHomeAdditionalInformation,
   TourHomeCardContainer, 
   TourHomeHighlights, 
   TourHomeThingToDo, 
@@ -7,7 +8,7 @@ import {
 } from '../../components';
 import '../../styles/tourHome.scss';
 import {Helmet} from "react-helmet";
-import { splashManiaCardData, splashManiaHighlighhtsData, splashManiaThingsToDoData, splashmaniaWhyVistData } from './data';
+import { splashManiaAdditionInfoData, splashManiaCardData, splashManiaHighlighhtsData, splashManiaThingsToDoData, splashmaniaWhyVistData } from './data';
 
 const SplashMania = () => {
   return (
@@ -35,6 +36,7 @@ const SplashMania = () => {
         highlightsData={splashManiaHighlighhtsData}
         title={"Splash Mania"}
       />
+      <TourHomeAdditionalInformation quesData={splashManiaAdditionInfoData} />
      </section>
     </>
   )

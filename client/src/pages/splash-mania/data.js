@@ -142,3 +142,38 @@ export const splashManiaHighlighhtsData = [
         image: "https://i.postimg.cc/fRfyJK1T/FB-IMG-1672326776017.jpg"
     },
 ]
+
+//Additional Information
+
+export const splashManiaAdditionInfoData = [
+    {
+        id: nanoid(),
+        ques:"Operating Hours ?",
+        ans:[
+            "Thursday - Tuesday : 10am - 6pm", 
+            "(Closed on Wednesday EXCEPT during Malaysia public holidays and school holidays)",
+            "Ramadan Promo Operation Hours (12 March to 9 April 2024)"
+        ]
+    },
+    {
+        id: nanoid(),
+        ques:"Child Policy",
+        ans:[
+            "Adult: Height 110cm above.",
+            "Child height 90cm to 110cm",
+            "Senior Citizen age 60 and above."
+        ]
+    },
+    {
+        id: nanoid(),
+        ques:"Refund/Cancellation Policy",
+        ans:[
+            "No cancellation and refund are allowed once purchased"
+        ]
+    },
+    {
+        id: nanoid(),
+        ques:"Redemption Guide",
+        ans:["Upon arrival, show your ticket/e-voucher at the counter"]
+    },
+]
