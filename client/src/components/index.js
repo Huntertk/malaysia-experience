@@ -6,6 +6,8 @@ import TourLayout from "./tour/layout/TourLayout";
 import HomeLayout from "./home/layout/HomeLayout";
 import TourHomeTopContainer from "./tour/homeComponents/TourHomeTopContainer";
 import TourHomeCardContainer from "./tour/homeComponents/TourHomeCardContainer";
+import TourWhyVisit from "./tour/homeComponents/TourWhyVisit";
+
 
 export {
     ImageSlider,
@@ -15,5 +17,6 @@ export {
     ProductContainer,
     TourLayout,
     TourHomeTopContainer,
-    TourHomeCardContainer
+    TourHomeCardContainer,
+    TourWhyVisit
 }

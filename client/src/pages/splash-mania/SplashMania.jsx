@@ -1,7 +1,7 @@
-import { TourHomeCardContainer, TourHomeTopContainer } from '../../components';
+import { TourHomeCardContainer, TourHomeTopContainer, TourWhyVisit } from '../../components';
 import '../../styles/tourHome.scss';
 import {Helmet} from "react-helmet";
-import { splashManiaCardData } from '../../data';
+import { splashManiaCardData, splashmaniaWhyVistData } from '../../data';
 
 const SplashMania = () => {
   return (
@@ -18,6 +18,10 @@ const SplashMania = () => {
           imgUrl={"https://i.postimg.cc/BnSswGw4/splashmania-newtagline-2022-2.png"}
           />
       <TourHomeCardContainer cardData={splashManiaCardData}  />
+      <TourWhyVisit 
+        whyVisitData={splashmaniaWhyVistData}
+        serviceName={"Splash Mania"}
+      />
      </section>
     </>
   )

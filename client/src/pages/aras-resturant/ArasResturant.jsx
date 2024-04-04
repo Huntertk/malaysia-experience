@@ -1,5 +1,5 @@
-import { TourHomeCardContainer, TourHomeTopContainer } from '../../components';
-import { arasResturantCardData } from '../../data';
+import { TourHomeCardContainer, TourHomeTopContainer, TourWhyVisit } from '../../components';
+import { arasResturantCardData, arasResturantWhyVistData } from '../../data';
 import '../../styles/tourHome.scss';
 import {Helmet} from "react-helmet";
 
@@ -18,6 +18,10 @@ const ArasResturant = () => {
           imgUrl={"https://i.postimg.cc/gcVBqRKf/17.jpg"}
           />
        <TourHomeCardContainer cardData={arasResturantCardData}  />   
+       <TourWhyVisit 
+        whyVisitData={arasResturantWhyVistData}
+        serviceName={"Aras Resturant"}
+      />
      </section>
     </>
   )

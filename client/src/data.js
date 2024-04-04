@@ -101,6 +101,60 @@ export const arasResturantCardData = [
     },
 ]
 
+export const splashmaniaWhyVistData = [
+    {
+        id: nanoid(),
+        title: "Treasure Tower",
+        desc:"A colossal slide combination that seamlessly merges multiple flumes and splash buckets for an exhilarating experience.",
+        imgUrl:"https://i.postimg.cc/vHNs5xSx/14-Treasure-Tower-2023-01-27-041251-xgwt-removebg-preview.png"
+    },
+    {
+        id: nanoid(),
+        title: "Splash Sploosh",
+        desc:"An engaging water fountain splash pad designed for enjoyment by both kids and adults alike.",
+        imgUrl:"https://i.postimg.cc/sgGRmft6/23-Splash-Sploosh-2023-01-27-041654-oyas-removebg-preview.png"
+    },
+    {
+        id: nanoid(),
+        title: "Ravage River",
+        desc:"Embark on a journey through diverse ride elements with attractions like Savage Ravage, Secret Lair, Donut Rapids, Bubbly Dip, Monsoon, Pinnacle Creek, Rain Shooters, Happy Feet, and the Wave Ball Pool.",
+        imgUrl:"https://i.postimg.cc/QMLZyGDX/15-Ravage-River-removebg-preview.png"
+    },
+    {
+        id: nanoid(),
+        title: "Meet and Greet",
+        desc:"In line with Splash Mania's rainforest theme, these mascots were selected as some of the most remarkable and majestic creatures inhabiting the rainforest terrain.",
+        imgUrl:"https://i.postimg.cc/JhbCw67j/pasd-removebg-preview.png"
+    },
+]
+
+export const arasResturantWhyVistData = [
+    {
+        id: nanoid(),
+        title: "Exceptional Dining Experience",
+        desc:"Delight in a one-of-a-kind culinary journey as the restaurant gracefully revolves, presenting a captivating 360-degree panorama of Kuala Lumpur's city scape.",
+        imgUrl:"https://i.postimg.cc/5yggcB7y/IMG-20240129-WA0076.jpg"
+    },
+    {
+        id: nanoid(),
+        title: "Enchanting Atmosphere",
+        desc:"Immerse yourself in an interior design reminiscent of a futuristic spaceship, crafting a mesmerizing and unforgettable ambiance akin to dining amidst the celestial stars.",
+        imgUrl:"https://i.postimg.cc/BQQbJT73/2.jpg"
+    },
+    {
+        id: nanoid(),
+        title: "Gastronomic Delights",
+        desc:"Indulge in a sumptuous Hi-Tea Buffet prepared by culinary experts, showcasing the best of Malay cuisine with premium ingredients.",
+        imgUrl:"https://i.postimg.cc/2yHz1t9D/9.jpg"
+    },
+    {
+        id: nanoid(),
+        title: "Culinary Excellence",
+        desc:"Savor a delectable Hi-Tea Buffet meticulously crafted by skilled culinary artisans, showcasing the finest elements of Malay cuisine with premium, handpicked ingredients.",
+        imgUrl:"https://i.postimg.cc/TYwdzRhY/10.jpg"
+    },
+]
+
 
 export const homeProductData = [
     {
