@@ -1,0 +1,66 @@
+@use './variables.scss' as *;
+
+.countryGridMainSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    max-width: $maxWidth;
+    margin: 1rem auto;
+
+    h1{
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .countryGridContainer{
+
+        .gridItem{
+            position: relative;
+            border-radius: 14px;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            max-width: 650px;
+            
+            img{
+                border-radius: 14px;
+                height: 350px;
+                width: 100%;
+                object-fit: cover;
+                transition: all 0.3s ease-in;
+                &:hover{
+                    transform: scale(1.3);
+                }
+            }
+            h1{
+                position: absolute;
+                top: 25%;
+                left: 50%;
+                transform: translate(-50%, 50%);
+                font-size: 2rem;
+                color: #fff;
+                font-family: "Shantell Sans", cursive;
+                letter-spacing: 3px;
+            }
+
+            
+        }
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .countryGridMainSection{
+        h1{
+         
+            font-size: 2.4rem;
+        }
+        .countryGridContainer{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+    }
+}
