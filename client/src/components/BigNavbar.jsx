@@ -1,5 +1,4 @@
-import { IoCloseOutline } from "react-icons/io5";
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import {motion} from 'framer-motion'
 
 

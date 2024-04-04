@@ -108,7 +108,8 @@
 
 
             .bigNavContainer{
-
+                background-color: $backgroundColor;
+                padding: 0.5rem 1rem;
                 .bigHeaderNavContainer{
                     display: flex;
                     align-items: center;

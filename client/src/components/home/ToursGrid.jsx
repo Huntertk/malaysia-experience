@@ -1,7 +1,9 @@
 import '../../styles/toursGrid.scss';
 import {motion} from 'framer-motion';
+import {useNavigate} from 'react-router-dom';
 
 const ToursGrid = ({data}) => {
+  const navigate = useNavigate()
     const easeScaleUp = {
         initial:{
           scale:0,
@@ -22,6 +24,7 @@ const ToursGrid = ({data}) => {
                         className="gridItem" 
                         key={tour.id}
                         {...easeScaleUp}
+                        onClick={() => navigate(`${tour.link}`)}
                     >
                         <img src={tour.img} alt={tour.title} />
                         <h1>{tour.title}</h1>
