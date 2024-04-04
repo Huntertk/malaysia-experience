@@ -1,9 +1,10 @@
 import { 
   ImageSlider, 
-  CountryGrid, 
+  ToursGrid, 
   ProductContainer,
   Award
 } from '../components';
+import { homeToursData } from '../data';
 
 import '../styles/home.scss';
 
@@ -12,7 +13,7 @@ const Home = () => {
   return (
     <section className='homeMainSection'>
       <ImageSlider />
-      <CountryGrid />
+      <ToursGrid data={homeToursData} />
       <ProductContainer />
       <Award />
     </section>

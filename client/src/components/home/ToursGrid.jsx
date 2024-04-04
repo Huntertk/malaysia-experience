@@ -1,8 +1,7 @@
-import '../../styles/countryGrid.scss';
-import { homeCountryData } from '../../data';
+import '../../styles/toursGrid.scss';
 import {motion} from 'framer-motion';
 
-const CountryGrid = () => {
+const ToursGrid = ({data}) => {
     const easeScaleUp = {
         initial:{
           scale:0,
@@ -14,18 +13,18 @@ const CountryGrid = () => {
         },
       }
   return (
-    <section className='countryGridMainSection'>
+    <section className='toursGridMainSection'>
         <h1>Explore New Destination</h1>
-        <div className="countryGridContainer">
+        <div className="toursGridContainer">
             {
-                homeCountryData.map((country) => (
+                data.map((tour) => (
                     <motion.div 
                         className="gridItem" 
-                        key={country.id}
+                        key={tour.id}
                         {...easeScaleUp}
                     >
-                        <img src={country.img} alt={country.title} />
-                        <h1>{country.title}</h1>
+                        <img src={tour.img} alt={tour.title} />
+                        <h1>{tour.title}</h1>
                     </motion.div>
                 ))
             }
@@ -34,4 +33,4 @@ const CountryGrid = () => {
   )
 }
 
-export default CountryGrid
+export default ToursGrid

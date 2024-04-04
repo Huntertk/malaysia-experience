@@ -1,6 +1,6 @@
 @use './variables.scss' as *;
 
-.countryGridMainSection{
+.toursGridMainSection{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +14,7 @@
         margin-bottom: 1rem;
     }
 
-    .countryGridContainer{
+    .toursGridContainer{
 
         .gridItem{
             position: relative;
@@ -40,7 +40,10 @@
                 left: 50%;
                 transform: translate(-50%, 50%);
                 font-size: 2rem;
-                color: #fff;
+                background-color: $primaryModalColor;
+                color: $textColor;
+                border-radius: 14px;
+                padding: 5px 10px;
                 font-family: "Shantell Sans", cursive;
                 letter-spacing: 3px;
             }
@@ -51,12 +54,12 @@
 }
 
 @media screen and (min-width: 767px) {
-    .countryGridMainSection{
+    .toursGridMainSection{
         h1{
          
             font-size: 2.4rem;
         }
-        .countryGridContainer{
+        .toursGridContainer{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
