@@ -18,9 +18,16 @@ export const arasResturantCardData = [
             {
                 title:"Malaysian",
                 price:{
-                    adult:240,
-                    child:142,
-                    senior:142,
+                    weekDays:{
+                        adult:240,
+                        child:142,
+                        senior:142,
+                    },
+                    weekEnds:{
+                        adult:240,
+                        child:142,
+                        senior:142,
+                    },
                 },
                 details:[
                     "Valid only for Malaysian Citizens"
@@ -29,9 +36,16 @@ export const arasResturantCardData = [
             {
                 title:"Non-Malaysian",
                 price:{
-                    adult:240,
-                    child:142,
-                    senior:142,
+                    weekDays:{
+                        adult:240,
+                        child:142,
+                        senior:142,
+                    },
+                    weekEnds:{
+                        adult:240,
+                        child:142,
+                        senior:142,
+                    },
                 },
                 details:[
                     "Valid only for Non Malaysian Citizens"

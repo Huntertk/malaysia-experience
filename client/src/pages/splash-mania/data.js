@@ -22,9 +22,16 @@ export const splashManiaCardData = [
             {
                 title:"Malaysian",
                 price:{
-                    adult:103,
-                    child:85,
-                    senior:85,
+                    weekDays:{
+                        adult:103,
+                        child:85,
+                        senior:85,
+                    },
+                    weekEnds:{
+                        adult:103,
+                        child:85,
+                        senior:85,
+                    },
                 },
                 details:[
                     "Valid only for Malaysian Citizens"
@@ -33,9 +40,16 @@ export const splashManiaCardData = [
             {
                 title:"Non-Malaysian",
                 price:{
-                    adult:103,
-                    child:85,
-                    senior:85,
+                    weekDays:{
+                        adult:103,
+                        child:85,
+                        senior:85,
+                    },
+                    weekEnds:{
+                        adult:103,
+                        child:85,
+                        senior:85,
+                    },
                 },
                 details:[
                     "Valid only for Non Malaysian Citizens"

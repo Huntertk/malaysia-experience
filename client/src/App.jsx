@@ -2,6 +2,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import {Helmet} from "react-helmet";
 import {
   ArasResturant, 
+  BerjayaaTimesSquare, 
   Home, 
   SplashMania,
   Tours
@@ -24,6 +25,7 @@ const App = () => {
               <Route element={<TourLayout />}>
                 <Route path='/splash-mania' element={<SplashMania />} />
                 <Route path='/aras-resturant' element={<ArasResturant />} />
+                <Route path='/berjaya-times-square' element={<BerjayaaTimesSquare />} />
               </Route>
               <Route path='*' element={<h1>Page Not Found</h1>} />
           </Routes>
