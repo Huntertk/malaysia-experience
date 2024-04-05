@@ -2,7 +2,7 @@ import '../../styles/toursGrid.scss';
 import {motion} from 'framer-motion';
 import {useNavigate} from 'react-router-dom';
 
-const ToursGrid = ({data}) => {
+const ToursGrid = ({data, title}) => {
   const navigate = useNavigate()
     const easeScaleUp = {
         initial:{
@@ -16,7 +16,7 @@ const ToursGrid = ({data}) => {
       }
   return (
     <section className='toursGridMainSection'>
-        <h1>Explore New Destination</h1>
+        <h1>{title}</h1>
         <div className="toursGridContainer">
             {
                 data.map((tour) => (

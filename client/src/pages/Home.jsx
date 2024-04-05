@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <section className='homeMainSection'>
       <ImageSlider />
-      <ToursGrid data={homeToursData} />
+      <ToursGrid data={homeToursData} title={"Explore New Destination"} />
       <ProductContainer />
       <Award />
     </section>

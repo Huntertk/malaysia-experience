@@ -3,7 +3,8 @@ import {Helmet} from "react-helmet";
 import {
   ArasResturant, 
   Home, 
-  SplashMania
+  SplashMania,
+  Tours
  } from './pages'
 import { HomeLayout, TourLayout } from './components'
 
@@ -18,6 +19,7 @@ const App = () => {
           <Routes>
               <Route element={<HomeLayout />}>
                 <Route path='/' element={<Home />} />
+                <Route path='/tours' element={<Tours />} />
               </Route>
               <Route element={<TourLayout />}>
                 <Route path='/splash-mania' element={<SplashMania />} />
