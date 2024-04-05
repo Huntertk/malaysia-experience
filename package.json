@@ -1,0 +1,16 @@
+{
+  "name": "malaysia-experience",
+  "version": "1.0.0",
+  "description": "Malaysia Experience is an Online Travel Agency",
+  "main": "backend/src/index.js",
+  "scripts": {
+    "dev": "nodemon backend/src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.0"
+  }
+}
