@@ -4,12 +4,14 @@ import {
   SplashMania,
  } from './pages'
 import { DateSelectionContainer, TourLayout } from './components'
+import { Toaster } from 'react-hot-toast';
 import Booking from './pages/Booking';
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
+      <Toaster />
           <Routes>
               <Route element={<TourLayout />}>
                 {

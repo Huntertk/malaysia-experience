@@ -5,7 +5,8 @@ const dotenv = require('dotenv');
 const cookieParser = require('cookie-parser');
 const adminRouter = require('./routes/adminRoute');
 const bookingRouter = require('./routes/bookingRoute')
-const bookTypeOneDateRouter = require('./routes/bookTypeOneDateRoutes')
+const bookTypeOneDateRouter = require('./routes/bookTypeOneDateRoutes');
+const errorHandlerMiddleware = require('./middlewares/errorHandleMiddleware');
 dotenv.config();
 
 //Initializing Express App
@@ -32,6 +33,9 @@ app.use(express.static(path.join(__dirname, "..", "..", "client", "dist")))
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, "..", "..", "client", "dist", "index.html"))
 })
+
+//Global Err Handler
+app.use(errorHandlerMiddleware)
 
 //Server Start
 

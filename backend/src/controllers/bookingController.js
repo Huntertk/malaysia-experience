@@ -20,7 +20,7 @@ const createBooking = async (req, res) => {
         bookingType,
         bookingTitle,
         responseClientUrl,
-        websiteName,
+        service,
         pref
     } = req.body;
     try {
@@ -39,8 +39,8 @@ const createBooking = async (req, res) => {
                                 pref, 
                                 name, 
                                 email, 
-                                mobileNumber, 
-                                websiteName
+                                mobileNumber,
+                                service
                             }
                         },
                         unit_amount: totalAmount * 100,
@@ -105,7 +105,7 @@ const successBooking = async (req, res, next) => {
         const mailOptions = {
             from: process.env.EMAIL,
             to: `${req.body.email},
-        ${process.env.EMAIL}`,
+            ${process.env.EMAIL}`,
             subject: `Booking Successfully`,
             html: `
             <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
