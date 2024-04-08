@@ -42,6 +42,8 @@ const Booking = () => {
                 mobileNumber,
                 bookingDate,
                 adultCount,
+                adultTotal,
+                childTotal,
                 childCount,
                 totalAmount,
                 bookingTitle,
