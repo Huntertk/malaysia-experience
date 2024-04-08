@@ -20,8 +20,8 @@ app.use(cookieParser())
 //Routes
 app.use("/api/v1/booking", bookingRouter)
 app.use("/api/v1/admin", adminRouter)
-// app.use("/api/v1/bookingplan", bookingPlanRouter)
 app.use("/api/v1/booktype-one-dates-manage", bookTypeOneDateRouter)
+// app.use("/api/v1/bookingplan", bookingPlanRouter)
 
 
 //Serving Frontend Statically

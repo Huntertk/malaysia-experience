@@ -8,7 +8,6 @@ import { choosingBooking } from '../../../redux/features/bookingSlice';
 
 const TourHomeCard = ({data}) => {
     const {image, id, service, title, desc, type, pricing, preference, inclusionAndExclusion} = data;
-    console.log(data);
     const navigate = useNavigate();
     const dispatch = useDispatch();
 

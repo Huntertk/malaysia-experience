@@ -11,6 +11,7 @@ import {Navigate, useNavigate} from 'react-router-dom'
 import axios from 'axios'
 // import PreferenceTour from './PreferenceTour';
 import LoadingSpinner from '../LoadingSpinner';
+import PreferenceTour from './PreferenceTour';
 
 
 function isPastDate(date) {
@@ -182,12 +183,11 @@ const DateSelectionContainer = () => {
           },[])
 
           
-        //   if(!type){
-        //       return <Navigate to="/" />
-        //     }
+          if(!type){
+              return <Navigate to="/" />
+            }
             const defaultMonth = new Date(Date.now());
             
-            const navigate = useNavigate()
             if(isLoading){
               return <LoadingSpinner />
             }
@@ -213,12 +213,12 @@ const DateSelectionContainer = () => {
             onSelect={setSelectedDate}
             fromMonth={defaultMonth}
             toDate={new Date(Date.now() + 1000 * 60 *60 *24 *90)}
-            // disabled={disabledDates}
+            disabled={disabledDates}
             />
             </div>
-            {/* {
+            {
                 selectedDate && <PreferenceTour selectedDate={selectedDate} data={prefrenceOpt}  /> 
-            } */}
+            }
             <div className="selectedDate">
                 {
                     selectedDate ? <>
