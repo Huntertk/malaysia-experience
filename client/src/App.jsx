@@ -4,6 +4,7 @@ import {
   SplashMania,
  } from './pages'
 import { DateSelectionContainer, TourLayout } from './components'
+import Booking from './pages/Booking';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
                 }
 
               <Route path='/date-select' element={<DateSelectionContainer />} />
+              <Route path='/booking' element={<Booking />} />
               </Route>
                 <Route path='*' element={<h1>Page Not Found</h1>} />
           </Routes>
