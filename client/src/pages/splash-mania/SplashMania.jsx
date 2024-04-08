@@ -10,8 +10,16 @@ import {
 import '../../styles/tourHome.scss';
 import {Helmet} from "react-helmet";
 import { splashManiaAdditionInfoData, splashManiaCardData, splashManiaHighlighhtsData, splashManiaThingsToDoData, splashManiaTourHomeFAQ, splashmaniaWhyVistData } from './data';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { initialRender } from '../../redux/features/bookingSlice';
 
 const SplashMania = () => {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(initialRender())
+  },[])
   return (
     <>
     {/*Dynamic Title */}

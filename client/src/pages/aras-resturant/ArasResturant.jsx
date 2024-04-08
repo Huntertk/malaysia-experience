@@ -17,8 +17,16 @@ import {
 
 import '../../styles/tourHome.scss';
 import {Helmet} from "react-helmet";
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { initialRender } from '../../redux/features/bookingSlice';
 
 const ArasResturant = () => {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(initialRender())
+  },[])
   return (
     <>
     {/*Dynamic Title */}

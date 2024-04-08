@@ -13,7 +13,11 @@ const App = () => {
           <Routes>
               <Route element={<TourLayout />}>
                 {
-                  window.location.hostname === 'localhost' ? <Route path='/' element={<SplashMania />} /> : <Route path='/' element={<ArasResturant />} />
+                  window.location.hostname === 'localhost' ? (
+                    <Route path='/' element={<SplashMania />} />
+                  ) : (
+                    <Route path='/' element={<ArasResturant />} />
+                  )
                 }
 
               <Route path='/date-select' element={<DateSelectionContainer />} />
