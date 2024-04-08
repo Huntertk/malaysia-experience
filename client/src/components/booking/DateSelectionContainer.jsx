@@ -12,6 +12,7 @@ import axios from 'axios'
 // import PreferenceTour from './PreferenceTour';
 import LoadingSpinner from '../LoadingSpinner';
 import PreferenceTour from './PreferenceTour';
+import PaxModal from './PaxModal';
 
 
 function isPastDate(date) {
@@ -240,7 +241,7 @@ const DateSelectionContainer = () => {
             </div>
         </div>
         
-       {/* { isPaxModal && <PaxModal  selectedDate={selectedDate} />} */}
+       { isPaxModal && <PaxModal  selectedDate={selectedDate} />}
         
         
     </section>

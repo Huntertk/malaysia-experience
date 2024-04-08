@@ -6,7 +6,7 @@ import { countTotalBookingAmount, setPreference } from '../../redux/features/boo
 const CardData = ({cardData}) => {
     const {pref}  = useSelector(state => state.booking);
     const dispatch = useDispatch()
-    let price = cardData.price.weekDays.adult;
+    let price = cardData.price.weekDays.adult || cardData.price.weekEnds.adult;
     
     return (
         <div className="prefrenceTabCard">
