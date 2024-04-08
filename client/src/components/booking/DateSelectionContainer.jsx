@@ -103,13 +103,13 @@ const DateBtn = ({setSelectedDate, setCalenderOpen,selectedDate, calenderOpen, d
 
 const DateSelectionContainer = () => {
     const dispatch = useDispatch()
-    const {isPaxModal, type, pref, prefrenceOpt} = useSelector(store => store.booking)
+    const {isPaxModal, type, pref, prefrenceOpt, service} = useSelector(store => store.booking)
         const [selectedDate, setSelectedDate] = useState("")
         const [calenderOpen, setCalenderOpen] = useState(false)
         const [blockedDates, setBlockedDates] = useState([])
         const disabledDates = blockedDates?.map((dates) => new Date(dates.blockDates))
         const [isLoading, setIsLoading] = useState(false)
-
+    console.log(service);
         const disabledDays = [
             ...disabledDates
           ];
@@ -117,7 +117,7 @@ const DateSelectionContainer = () => {
           const getBookTypeOneBlockDates = async () => {
             try {
                 setIsLoading(true)
-                const {data} = await axios.get('/api/v1/booktype-one-dates-manage/block-dates')
+                const {data} = await axios.get(`/api/v1/${service}-booktype-one-dates-manage/block-dates`)
                 setBlockedDates(data.blockDates)
                 setIsLoading(false)
               } catch (error) {
@@ -128,7 +128,7 @@ const DateSelectionContainer = () => {
           const getBookTypeTwoBlockDates = async () => {
             try {
                 setIsLoading(true)
-                const {data} = await axios.get('/api/v1/booktype-two-dates-manage/block-dates')
+                const {data} = await axios.get(`/api/v1/${service}-booktype-two-dates-manage/block-dates`)
                 setBlockedDates(data.blockDates)
                 setIsLoading(false)
               } catch (error) {
@@ -139,7 +139,7 @@ const DateSelectionContainer = () => {
           const getBookTypeThreeBlockDates = async () => {
             try {
                 setIsLoading(true)
-                const {data} = await axios.get('/api/v1/booktype-three-dates-manage/block-dates')
+                const {data} = await axios.get(`/api/v1/${service}-booktype-three-dates-manage/block-dates`)
                 setBlockedDates(data.blockDates)
                 setIsLoading(false)
               } catch (error) {
@@ -150,7 +150,7 @@ const DateSelectionContainer = () => {
           const getBookTypeFourBlockDates = async () => {
             try {
                 setIsLoading(true)
-                const {data} = await axios.get('/api/v1/booktype-four-dates-manage/block-dates')
+                const {data} = await axios.get(`/api/v1/${service}-booktype-four-dates-manage/block-dates`)
                 setBlockedDates(data.blockDates)
                 setIsLoading(false)
               } catch (error) {
@@ -161,7 +161,7 @@ const DateSelectionContainer = () => {
           const getBookTypeFiveBlockDates = async () => {
             try {
                 setIsLoading(true)
-                const {data} = await axios.get('/api/v1/booktype-five-dates-manage/block-dates')
+                const {data} = await axios.get(`/api/v1/${service}-booktype-five-dates-manage/block-dates`)
                 setBlockedDates(data.blockDates)
                 setIsLoading(false)
               } catch (error) {
