@@ -2,9 +2,15 @@ import React, { useState } from 'react'
 import TourHomeWhatsIncluded from './TourHomeWhatsIncluded';
 import ImageViewerContainer from './ImageViewerContainer';
 import {motion} from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { choosingBooking } from '../../../redux/features/bookingSlice';
 
 const TourHomeCard = ({data}) => {
-    const {image, id, title, desc, type, pricing, preference, inclusionAndExclusion} = data;
+    const {image, id, service, title, desc, type, pricing, preference, inclusionAndExclusion} = data;
+    console.log(data);
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const [imgViewer, setImageViwer] = useState(false)
     const easeScaleUp = {
@@ -34,8 +40,8 @@ const TourHomeCard = ({data}) => {
             </div>
             <div className="cardBtnContainer">
                 <button onClick={() => {
-                    // dispatch(choosingBooking({type, title, pricing, preference}))
-                    // return navigate("/date-confirm")
+                    dispatch(choosingBooking({type, title, pricing, preference, service}))
+                    return navigate("/date-select")
                 }} className='checkAvailability'>
                     Book Now
                 </button>

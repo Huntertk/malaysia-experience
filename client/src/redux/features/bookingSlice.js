@@ -24,6 +24,7 @@ const initialState = {
     bookingTitle:"",
     pricing:{},
     prefrenceOpt:[],
+    service:""
 }
 
 
@@ -161,7 +162,8 @@ const bookingSlice = createSlice({
             state.type = action.payload.type
             state.bookingTitle = action.payload.title,
             state.pricing = action.payload.pricing,
-            state.prefrenceOpt = action.payload.preference
+            state.prefrenceOpt = action.payload.preference,
+            state.service = action.payload.service
         },
         settingBookingResponse: (state, action) => {
             state.bookingResponse = ""

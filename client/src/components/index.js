@@ -11,7 +11,7 @@ import TourHomeThingToDo from "./tour/homeComponents/TourHomeThingToDo";
 import TourHomeHighlights from "./tour/homeComponents/TourHomeHighlights";
 import TourHomeAdditionalInformation from "./tour/homeComponents/TourHomeAdditionalInformation";
 import TourHomeMap from "./tour/homeComponents/TourHomeMap";
-
+import DateSelectionContainer from "./booking/DateSelectionContainer";
 
 export {
     ImageSlider,
@@ -26,5 +26,6 @@ export {
     TourHomeThingToDo,
     TourHomeHighlights,
     TourHomeAdditionalInformation,
-    TourHomeMap
+    TourHomeMap,
+    DateSelectionContainer
 }
