@@ -8,7 +8,9 @@ import {
   ManageDates,
   NotFound,
   PrivacyPolicy,
+  SplashMainaDateManage,
   SplashMania,
+  SplashManiaBookTypeOneDate,
   TermAndConditionPage,
  } from './pages'
 import { AdminLayout, DateSelectionContainer, TourLayout } from './components'
@@ -42,6 +44,8 @@ const App = () => {
                   <Route element={<AdminLayout />}>
                     <Route path="/admin/all-booking" element={<AllBookings />} />
                     <Route path="/admin/manage-dates" element={<ManageDates />} />
+                    <Route path="/admin/manage-dates/splash-mania" element={<SplashMainaDateManage />} />
+                    <Route path="/admin/manage-dates/splash-mania/booktype-one" element={<SplashManiaBookTypeOneDate />} />
                   </Route>
                 </Route>
                 <Route path='*' element={<NotFound />} />

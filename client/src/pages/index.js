@@ -11,7 +11,12 @@ import HelpCenter from "./HelpCenter";
 import AdminLogin from "./admin/AdminLogin";
 import ManageDates from "./admin/ManageDates";
 import AllBookings from "./admin/AllBookings";
+import SplashMainaDateManage from "./admin/splash-mania/SplashMainaDateManage";
+import SplashManiaBookTypeOneDate from "./admin/splash-mania/SplashManiaBookTypeOneDate";
+
 export {
+    SplashManiaBookTypeOneDate,
+    SplashMainaDateManage,
     Home,
     AllBookings,
     TermAndConditionPage,
