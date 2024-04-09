@@ -108,8 +108,8 @@ const DateSelectionContainer = () => {
         const [calenderOpen, setCalenderOpen] = useState(false)
         const [blockedDates, setBlockedDates] = useState([])
         const disabledDates = blockedDates?.map((dates) => new Date(dates.blockDates))
-        const [isLoading, setIsLoading] = useState(false)
-    console.log(service);
+        const [isLoading, setIsLoading] = useState(false);
+        
         const disabledDays = [
             ...disabledDates
           ];
