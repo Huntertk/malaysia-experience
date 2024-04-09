@@ -9,6 +9,7 @@ import {
   HelpCenter,
   ManageDates,
   NotFound,
+  PaymentSucess,
   PrivacyPolicy,
   SplashMainaDateManage,
   SplashMania,
@@ -19,8 +20,10 @@ import { AdminLayout, DateSelectionContainer, TourLayout } from './components'
 import { Toaster } from 'react-hot-toast';
 import Booking from './pages/Booking';
 import AdminProtectedRoute from './components/admin/AdminProtectedRoute';
+import { useSelector } from 'react-redux';
 
 const App = () => {
+  const {responseClientUrl} = useSelector(state => state.booking)
   return (
     <>
       <BrowserRouter>
@@ -36,6 +39,7 @@ const App = () => {
                 }
                 <Route path='/date-select' element={<DateSelectionContainer />} />
                 <Route path='/booking' element={<Booking />} />
+                <Route path={`/${responseClientUrl}`} element={<PaymentSucess />} />
                 <Route path="/terms" element={<TermAndConditionPage />} />
                 <Route path="/privacypolicy" element={<PrivacyPolicy />} />
                 <Route path="/companydetails" element={<CompanyDetails />} />
