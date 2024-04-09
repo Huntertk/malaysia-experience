@@ -32,6 +32,9 @@ const Booking = () => {
     const dispatch = useDispatch()
     const responseClientUrl = nanoid()
 
+    const bannerImg = service === 'splash-mania' ? "https://i.postimg.cc/15PZfQSw/Splash-Mania-Waterpark-Ticketin-Gamuda-Cove-Selangor-Klook-Malaysia.jpg" : service === 'aras-resturant' ? "https://i.postimg.cc/j5VZydnx/IMG-20240129-WA0073.jpg" : ""
+
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
@@ -71,7 +74,7 @@ const Booking = () => {
     return (
         <section className='bookingMainContainer'>
             <div className="bookingWrapper">
-                <img className='banner' src={"https://i.postimg.cc/SskjyyGG/WhatsApp_Image_2023-12-05_at_09.31.44_pyeu2e.jpg"} alt="banner " />
+                <img className='banner' src={bannerImg} alt={service} />
                 <h1>Confirm and Pay</h1>
                 <div className="detailsWrapper">
                     <div className="detailsContainerWithTimeSlot">
