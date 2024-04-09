@@ -14,6 +14,7 @@ import {
 import { AdminLayout, DateSelectionContainer, TourLayout } from './components'
 import { Toaster } from 'react-hot-toast';
 import Booking from './pages/Booking';
+import AdminProtectedRoute from './components/admin/AdminProtectedRoute';
 
 const App = () => {
   return (
@@ -37,9 +38,11 @@ const App = () => {
                 <Route path="/helpcenter" element={<HelpCenter />} />
               </Route>
                 <Route path="/admin/login" element={<AdminLogin />} />
-                <Route element={<AdminLayout />}>
-                  <Route path="/admin/all-booking" element={<AllBookings />} />
-                  <Route path="/admin/manage-dates" element={<ManageDates />} />
+                <Route element={<AdminProtectedRoute />}>
+                  <Route element={<AdminLayout />}>
+                    <Route path="/admin/all-booking" element={<AllBookings />} />
+                    <Route path="/admin/manage-dates" element={<ManageDates />} />
+                  </Route>
                 </Route>
                 <Route path='*' element={<NotFound />} />
           </Routes>

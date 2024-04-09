@@ -6,13 +6,14 @@ import { adminLogout, adminSidebarOpen } from '../../redux/features/adminSlice'
 import toast  from 'react-hot-toast'
 import axios from 'axios'
 import { useGetAdminDataQuery } from '../../redux/api/adminAuthApi'
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react'
 
 const AdminHeader = () => {
     const {adminEmail} = useSelector(state => state.admin)
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    const {data,isLoading, isSuccess} = useGetAdminDataQuery()
+    const {data,isLoading, isSuccess, error} = useGetAdminDataQuery()
     
 
 
@@ -20,13 +21,16 @@ const AdminHeader = () => {
       try {
         const res = await axios.get('/api/v1/admin/logout')
         dispatch(adminLogout());
-        navigate("/");
       } catch (error) {
         toast.error("Something went wrong....")
         console.log(error);
       }
     }
+  
 
+    if(!adminEmail){
+      return <Navigate to="/" />
+    }
   return (
     <div id='adminHeaderMainContainer'>
         <div className="adminHeaderWrapper">
