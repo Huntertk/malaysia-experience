@@ -2,6 +2,7 @@ const Admin = require("../models/admin")
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const {StatusCodes} = require('http-status-codes');
+const AppError = require("../error/customError");
 
 const getAdminData = async (req, res, next) => {
     try {
@@ -29,17 +30,17 @@ const loginAdmin = async (req, res, next) => {
     try {
         
         if(!email || !password) {
-            throw new BadRequestError("Please Provide all Values")
+            return next(new AppError("Please Provide all Values",400))
         }
         
         const admin = await Admin.findOne({email})
         
         if(!admin){
-            throw new NotFoundError("Wrong Credentials")
+           return next(new AppError("Wrong Credentials",401))
         }
         const isPwdMatch = await bcrypt.compare(password, admin.password)
         if(!isPwdMatch){
-            throw new UnauthorizedError("Wrong Credentials")
+            return next(new AppError("Wrong Credentials",401))
         }
         const token = jwt.sign({_id: admin._id},process.env.JWT_SECRET)
         res.status(StatusCodes.OK).cookie('admin_token', token ,{

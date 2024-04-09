@@ -7,6 +7,7 @@ export const store = configureStore({
     reducer:{
         booking: bookingReducer,
         admin: adminReducer,
+        [adminAuthApi.reducerPath]: adminAuthApi.reducer
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat([
         adminAuthApi.middleware,

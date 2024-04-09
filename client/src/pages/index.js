@@ -8,6 +8,7 @@ import TermAndConditionPage from "./TermAndConditionPage";
 import PrivacyPolicy from "./PrivacyPolicy";
 import CompanyDetails from "./CompanyDetails";
 import HelpCenter from "./HelpCenter";
+import AdminLogin from "./admin/AdminLogin";
 export {
     Home,
     TermAndConditionPage,
@@ -18,5 +19,6 @@ export {
     Tours,
     PrivacyPolicy,
     HelpCenter,
-    CompanyDetails
+    CompanyDetails,
+    AdminLogin
 }
