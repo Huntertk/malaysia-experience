@@ -150,3 +150,70 @@ export const availableToursData = [
         slug:"99-wonderland-park"
     },
 ]
+
+
+
+
+
+export const termsandconditiondata = [
+    {
+        id: nanoid(),
+        title: "Limited License",
+        list:["You are granted a non-exclusive, non-transferable license to access and use our Website in accordance with these Terms."]
+    },
+    {
+        id: nanoid(),
+        title: "Our Relationship",
+        list:["We serve as an intermediary for purchasing goods/services and do not create any other relationship with users"]
+    },
+    {
+        id: nanoid(),
+        title: "Legal Compliance:",
+        list:["You agree to comply with all applicable laws and regulations. We may take appropriate action for non-compliance."]
+    },
+    {
+        id: nanoid(),
+        title: "Eligibility and Registration",
+        list:["You certify being at least 18 years old or having parental permission if aged 13 to 18. Registration in violation of these terms is unauthorized."]
+    },
+    {
+        id: nanoid(),
+        title: "DMCA Compliance",
+        list:["If you believe your work is infringed, provide required information to support@travelvago.com."]
+    },
+    {
+        id: nanoid(),
+        title: "Intellectual Property",
+        list:["Our trademarks and Website content are protected. Your use does not grant ownership rights."]
+    },
+    {
+        id: nanoid(),
+        title: "Linking",
+        list:["You may link to our Website, following guidelines provided."]
+    },
+    {
+        id: nanoid(),
+        title: "Links to Other Websites",
+        list:["We provide links for convenience, but we do not endorse or have an affiliation with Third Party Websites."]
+    },
+    {
+        id: nanoid(),
+        title: "Data Protection",
+        list:["We collect and use personal data as necessary. More details in our privacy policy.https://www.travelvago.com/privacy-policy"]
+    },
+    {
+        id: nanoid(),
+        title: "Warranty Disclaimer",
+        list:["We reserve the right to change Website content without notice. We are not responsible for errors, interruptions, or technical malfunctions."]
+    },
+    {
+        id: nanoid(),
+        title: "Limitation of Liability",
+        list:["We and our affiliates are not liable for any loss or damage resulting from Website use."]
+    },
+    {
+        id: nanoid(),
+        title: "Arbitration",
+        list:["Any legal controversy will be settled by binding arbitration. Each party bears one-half of arbitration fees."]
+    },
+]
