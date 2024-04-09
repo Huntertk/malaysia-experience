@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const adminRouter = require('./routes/adminRoute');
 const bookingRouter = require('./routes/bookingRoute');
 const splashManiaBookTypeOneDateRouter = require('./routes/splashMania/bookTypeOneDateRoutes');
+const arasResturantBookTypeOneDateRouter = require('./routes/arasResturant/bookTypeOneDateRoutes');
 const bookTypeOneDateRouter = require('./routes/bookTypeOneDateRoutes');
 const errorHandlerMiddleware = require('./middlewares/errorHandleMiddleware');
 dotenv.config();
@@ -26,6 +27,7 @@ app.use("/api/v1/booktype-one-dates-manage", bookTypeOneDateRouter);
 
 
 app.use("/api/v1/splash-mania-booktype-one-dates-manage", splashManiaBookTypeOneDateRouter);
+app.use("/api/v1/aras-resturant-booktype-one-dates-manage", arasResturantBookTypeOneDateRouter);
 // app.use("/api/v1/bookingplan", bookingPlanRouter)
 
 
