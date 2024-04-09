@@ -1,6 +1,7 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import {
   AdminLogin,
+  AllBookings,
   ArasResturant,
   CompanyDetails,
   HelpCenter,
@@ -37,7 +38,8 @@ const App = () => {
               </Route>
                 <Route path="/admin/login" element={<AdminLogin />} />
                 <Route element={<AdminLayout />}>
-                <Route path="/admin/manage-dates" element={<ManageDates />} />
+                  <Route path="/admin/all-booking" element={<AllBookings />} />
+                  <Route path="/admin/manage-dates" element={<ManageDates />} />
                 </Route>
                 <Route path='*' element={<NotFound />} />
           </Routes>

@@ -10,9 +10,10 @@ import CompanyDetails from "./CompanyDetails";
 import HelpCenter from "./HelpCenter";
 import AdminLogin from "./admin/AdminLogin";
 import ManageDates from "./admin/ManageDates";
-
+import AllBookings from "./admin/AllBookings";
 export {
     Home,
+    AllBookings,
     TermAndConditionPage,
     NotFound,
     About,
