@@ -3,6 +3,8 @@ import {
   AdminLogin,
   AllBookings,
   ArasResturant,
+  ArasResturantBookTypeOneDate,
+  ArasResturantDateManage,
   CompanyDetails,
   HelpCenter,
   ManageDates,
@@ -46,6 +48,14 @@ const App = () => {
                     <Route path="/admin/manage-dates" element={<ManageDates />} />
                     <Route path="/admin/manage-dates/splash-mania" element={<SplashMainaDateManage />} />
                     <Route path="/admin/manage-dates/splash-mania/booktype-one" element={<SplashManiaBookTypeOneDate />} />
+                    <Route 
+                      path="/admin/manage-dates/aras-resturant" 
+                      element={<ArasResturantDateManage />} 
+                    />
+                    <Route 
+                      path="/admin/manage-dates/aras-resturant/booktype-one" 
+                      element={<ArasResturantBookTypeOneDate />} 
+                    />
                   </Route>
                 </Route>
                 <Route path='*' element={<NotFound />} />

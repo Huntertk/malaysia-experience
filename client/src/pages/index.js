@@ -13,8 +13,12 @@ import ManageDates from "./admin/ManageDates";
 import AllBookings from "./admin/AllBookings";
 import SplashMainaDateManage from "./admin/splash-mania/SplashMainaDateManage";
 import SplashManiaBookTypeOneDate from "./admin/splash-mania/SplashManiaBookTypeOneDate";
+import ArasResturantDateManage from "./admin/aras-resturant/ArasResturantDateManage";
+import ArasResturantBookTypeOneDate from "./admin/aras-resturant/ArasResturantBookTypeOneDate";
 
 export {
+    ArasResturantBookTypeOneDate,
+    ArasResturantDateManage,
     SplashManiaBookTypeOneDate,
     SplashMainaDateManage,
     Home,

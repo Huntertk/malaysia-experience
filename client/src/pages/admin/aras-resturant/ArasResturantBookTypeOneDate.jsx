@@ -7,7 +7,7 @@ import toast from 'react-hot-toast'
 import moment from 'moment'
 import '../../../styles/manageDate.scss'
 
-const SplashManiaBookTypeOneDate = () => {
+const ArasResturantBookTypeOneDate = () => {
   const [isLoading, setIsLoading] = useState(false)
     const [selectedDate, setSelectedDate] = useState("")
     const [isFetch, setIsFetch] = useState(false)
@@ -21,7 +21,7 @@ const SplashManiaBookTypeOneDate = () => {
       const addBlockDate = async () => {
         try {
           setIsLoading(true)
-            const {data} = await axios.post('/api/v1/splash-mania-booktype-one-dates-manage/block-dates', {blockDates: dateToString})
+            const {data} = await axios.post('/api/v1/aras-resturant-booktype-one-dates-manage/block-dates', {blockDates: dateToString})
             toast.success("Date Blocked Successfully")
             setIsFetch(prev => !prev)
             setSelectedDate("")
@@ -33,7 +33,7 @@ const SplashManiaBookTypeOneDate = () => {
         
         const getBlockDates = async () => {
           try {
-            const {data} = await axios.get('/api/v1/splash-mania-booktype-one-dates-manage/block-dates')
+            const {data} = await axios.get('/api/v1/aras-resturant-booktype-one-dates-manage/block-dates')
             setBlockedDates(data.blockDates)
           } catch (error) {
             console.log(error);
@@ -43,7 +43,7 @@ const SplashManiaBookTypeOneDate = () => {
         const removeBlockedDate = async (id) => {
           try {
             setIsLoading(true)
-            const res = await axios.delete(`/api/v1/splash-mania-booktype-one-dates-manage/block-dates/${id}`)
+            const res = await axios.delete(`/api/v1/aras-resturant-booktype-one-dates-manage/block-dates/${id}`)
             setIsFetch(prev => !prev)
             setIsLoading(false)
           } catch (error) {
@@ -57,7 +57,7 @@ const SplashManiaBookTypeOneDate = () => {
 
   return (
     <div className='mainDateManageContainer'>
-        <h1>Ticket To Splash Mania<br /> Date Manage</h1>
+        <h1>ArasResturant<br /> Date Manage</h1>
         <DayPicker
                 defaultMonth={new Date(Date.now())}
                 mode="single"
@@ -91,4 +91,4 @@ const SplashManiaBookTypeOneDate = () => {
   )
 }
 
-export default SplashManiaBookTypeOneDate
+export default ArasResturantBookTypeOneDate
