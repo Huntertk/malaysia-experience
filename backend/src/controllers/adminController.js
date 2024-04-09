@@ -1,7 +1,7 @@
 const Admin = require("../models/admin")
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-
+const {StatusCodes} = require('http-status-codes');
 
 const getAdminData = async (req, res, next) => {
     try {

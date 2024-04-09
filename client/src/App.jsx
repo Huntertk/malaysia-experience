@@ -6,6 +6,7 @@ import {
 import { DateSelectionContainer, TourLayout } from './components'
 import { Toaster } from 'react-hot-toast';
 import Booking from './pages/Booking';
+import NotFound from './pages/NotFound';
 
 const App = () => {
   return (
@@ -22,10 +23,10 @@ const App = () => {
                   )
                 }
 
-              <Route path='/date-select' element={<DateSelectionContainer />} />
-              <Route path='/booking' element={<Booking />} />
+                <Route path='/date-select' element={<DateSelectionContainer />} />
+                <Route path='/booking' element={<Booking />} />
+                <Route path='*' element={<NotFound />} />
               </Route>
-                <Route path='*' element={<h1>Page Not Found</h1>} />
           </Routes>
       </BrowserRouter>
     </>
