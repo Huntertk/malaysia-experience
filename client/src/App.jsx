@@ -4,12 +4,13 @@ import {
   ArasResturant,
   CompanyDetails,
   HelpCenter,
+  ManageDates,
   NotFound,
   PrivacyPolicy,
   SplashMania,
   TermAndConditionPage,
  } from './pages'
-import { DateSelectionContainer, TourLayout } from './components'
+import { AdminLayout, DateSelectionContainer, TourLayout } from './components'
 import { Toaster } from 'react-hot-toast';
 import Booking from './pages/Booking';
 
@@ -35,7 +36,9 @@ const App = () => {
                 <Route path="/helpcenter" element={<HelpCenter />} />
               </Route>
                 <Route path="/admin/login" element={<AdminLogin />} />
-
+                <Route element={<AdminLayout />}>
+                <Route path="/admin/manage-dates" element={<ManageDates />} />
+                </Route>
                 <Route path='*' element={<NotFound />} />
           </Routes>
       </BrowserRouter>

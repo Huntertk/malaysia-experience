@@ -9,6 +9,8 @@ import PrivacyPolicy from "./PrivacyPolicy";
 import CompanyDetails from "./CompanyDetails";
 import HelpCenter from "./HelpCenter";
 import AdminLogin from "./admin/AdminLogin";
+import ManageDates from "./admin/ManageDates";
+
 export {
     Home,
     TermAndConditionPage,
@@ -20,5 +22,6 @@ export {
     PrivacyPolicy,
     HelpCenter,
     CompanyDetails,
-    AdminLogin
+    AdminLogin,
+    ManageDates
 }

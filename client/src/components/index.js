@@ -12,8 +12,10 @@ import TourHomeHighlights from "./tour/homeComponents/TourHomeHighlights";
 import TourHomeAdditionalInformation from "./tour/homeComponents/TourHomeAdditionalInformation";
 import TourHomeMap from "./tour/homeComponents/TourHomeMap";
 import DateSelectionContainer from "./booking/DateSelectionContainer";
+import AdminLayout from "./admin/AdminLayout";
 
 export {
+    AdminLayout,
     ImageSlider,
     HomeLayout,
     ToursGrid,
