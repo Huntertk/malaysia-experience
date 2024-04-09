@@ -1,6 +1,8 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import {
   ArasResturant,
+  CompanyDetails,
+  HelpCenter,
   NotFound,
   PrivacyPolicy,
   SplashMania,
@@ -29,8 +31,8 @@ const App = () => {
                 <Route path='/booking' element={<Booking />} />
                 <Route path="/terms" element={<TermAndConditionPage />} />
                 <Route path="/privacypolicy" element={<PrivacyPolicy />} />
-                {/* <Route path="/companydetails" element={<CompanyDetails />} />
-                <Route path="/helpcenter" element={<HelpCenter />} /> */}
+                <Route path="/companydetails" element={<CompanyDetails />} />
+                <Route path="/helpcenter" element={<HelpCenter />} />
                 <Route path='*' element={<NotFound />} />
               </Route>
           </Routes>

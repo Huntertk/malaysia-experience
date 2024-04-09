@@ -152,6 +152,41 @@ export const availableToursData = [
 ]
 
 
+export const helpCenterBookingFAQ = [
+    {
+        id: nanoid(),
+        ques:"How do I make a booking on Malaysia Experience?",
+        ans:"Making a booking is easy! Simply browse through our experiences, select the one you love, choose your preferred date and time, and follow the easy booking steps. Your adventure in Malaysia is just a few clicks away!"
+    },
+    {
+        id: nanoid(),
+        ques:"Is it safe to book through Malaysia Experience?",
+        ans:"Absolutely! We prioritize your safety and security. Our booking platform uses industry-standard encryption to safeguard your personal information, ensuring a worry-free booking experience"
+    },
+    {
+        id: nanoid(),
+        ques:"Can I book for a group?",
+        ans:"Of course! We welcome group bookings. When selecting an experience, you can specify the number of participants, and our system will guide you through the process to ensure everyone has a fantastic time."
+    },
+]
+
+export const helpCenterCancellationFAQ = [
+    {
+        id: nanoid(),
+        ques:"What is the cancellation policy?",
+        ans:"We understand plans can change. Our cancellation policy varies depending on the experience and the timing of your cancellation. You can find specific details on the experience page during the booking process."
+    },
+    {
+        id: nanoid(),
+        ques:"How do I cancel or request a refund?",
+        ans:"If you need to cancel, log in to your Malaysia Experience account, go to your bookings, and follow the cancellation instructions. Refund eligibility depends on the cancellation policy of the specific experience. We're here to help, so feel free to reach out to our customer support for assistance."
+    },
+    {
+        id: nanoid(),
+        ques:"What happens if the experience is canceled by Malaysia Experience?",
+        ans:"In the rare event that we have to cancel an experience, you will be notified promptly, and a full refund will be processed. Your satisfaction and safety are our top priorities."
+    },
+]
 
 
 

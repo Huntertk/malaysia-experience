@@ -6,6 +6,8 @@ import Tours from "./Tours";
 import NotFound from "./NotFound";
 import TermAndConditionPage from "./TermAndConditionPage";
 import PrivacyPolicy from "./PrivacyPolicy";
+import CompanyDetails from "./CompanyDetails";
+import HelpCenter from "./HelpCenter";
 export {
     Home,
     TermAndConditionPage,
@@ -14,5 +16,7 @@ export {
     SplashMania,
     ArasResturant,
     Tours,
-    PrivacyPolicy
+    PrivacyPolicy,
+    HelpCenter,
+    CompanyDetails
 }
