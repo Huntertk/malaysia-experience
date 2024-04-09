@@ -2,6 +2,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import {
   ArasResturant,
   NotFound,
+  PrivacyPolicy,
   SplashMania,
   TermAndConditionPage,
  } from './pages'
@@ -27,8 +28,8 @@ const App = () => {
                 <Route path='/date-select' element={<DateSelectionContainer />} />
                 <Route path='/booking' element={<Booking />} />
                 <Route path="/terms" element={<TermAndConditionPage />} />
-                {/* <Route path="/privacypolicy" element={<PrivacyPolicy />} />
-                <Route path="/companydetails" element={<CompanyDetails />} />
+                <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+                {/* <Route path="/companydetails" element={<CompanyDetails />} />
                 <Route path="/helpcenter" element={<HelpCenter />} /> */}
                 <Route path='*' element={<NotFound />} />
               </Route>

@@ -5,6 +5,7 @@ import ArasResturant from "./aras-resturant/ArasResturant";
 import Tours from "./Tours";
 import NotFound from "./NotFound";
 import TermAndConditionPage from "./TermAndConditionPage";
+import PrivacyPolicy from "./PrivacyPolicy";
 export {
     Home,
     TermAndConditionPage,
@@ -12,5 +13,6 @@ export {
     About,
     SplashMania,
     ArasResturant,
-    Tours
+    Tours,
+    PrivacyPolicy
 }
