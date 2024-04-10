@@ -773,7 +773,39 @@ const successBooking = async (req, res, next) => {
 
 const getAllBooking = async (req, res, next) => {
     try {
-        const booking = await Booking.find().sort({ createdAt: -1 })
+        //Building Query
+        const queryObj = {...req.query};
+
+        //Excluding Query from Query Obejct 
+        const excludedFelids = ["page", "service"];
+
+        excludedFelids.forEach((el) => delete queryObj[el]);
+        let queryStr = JSON.stringify(queryObj);
+        
+        let query = Booking.find(JSON.parse(queryStr)).sort({ createdAt: -1 });
+
+        if(req.query.service){
+            const service = req.query.service || ""
+            query = query.find({service}).sort({ createdAt: -1 })
+        }
+
+        //PAGINATION
+        const page = req.query.page * 1  || 1;
+        const limit = 50;
+        const skip = (page - 1) * limit;
+
+        query = query.skip(skip).limit(limit);
+
+        if(req.query.page){
+            const numBooking = await Booking.countDocuments();
+            if(skip > numBooking) {
+                throw new Error("This page does not exist")
+            }
+        }
+
+        //Execute Query
+        const booking = await query;
+
         res.status(StatusCodes.OK).json({ allBookings: booking })
     } catch (error) {
         next(error)
