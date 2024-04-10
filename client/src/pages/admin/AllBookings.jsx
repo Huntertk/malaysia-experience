@@ -7,12 +7,21 @@ import '../../styles/allBookings.scss'
 import BookingCard from '../../components/admin/BookingCard';
 import LoadingSpinner from '../../components/LoadingSpinner';
 import { useGetBookingDataQuery } from '../../redux/api/bookingDataApi';
+import { useSearchParams } from 'react-router-dom';
+import CustomPagination from '../../components/admin/CustomPagination';
 
 const AllBookings = () => {
   const {updateBookingStatus, allBookings} = useSelector(state => state.bookingDetails)
   const dispatch = useDispatch()
   const [option, setOption] = useState("")
-  const {data, isLoading, error, isSuccess} = useGetBookingDataQuery({service:option});
+  const [searchParams] = useSearchParams()
+  const page = searchParams.get('page') || 1; 
+  const service = option;
+  const params = {
+    page,
+    service
+}
+  const {data, isLoading, error, isSuccess} = useGetBookingDataQuery(params);
   // const getAllBookings = async () => {
   //   try {
   //     dispatch(getBookingStart())
@@ -26,9 +35,6 @@ const AllBookings = () => {
   // }
 
   useEffect(() => {
-    if(isSuccess){
-      console.log(data);
-    }
     if(error){
       console.log(error);
     }
@@ -39,11 +45,7 @@ const AllBookings = () => {
     return <LoadingSpinner />
   }
 
-  if(data?.allBookings.length === 0){
-    return <div>
-       <h1>No Bookings Now</h1>
-    </div>
-  }
+
   return (
     <>
       <div className='allBookingsMainContainer'>
@@ -56,11 +58,19 @@ const AllBookings = () => {
                 <option value={"splash-mania"}>Splash Mania</option>
           </select>
         </div>
-        <div className="allBookingsContainer">
+        {
+          data?.allBookings.length === 0 ? <h1>No Bookings Now</h1> : (
+            <div className="allBookingsContainer">
           {data?.allBookings.map((booking,index) => {
             return <BookingCard key={booking._id} booking={booking} index={index} />
           })}
       </div>
+          )
+        }
+        
+      <div className="paginationMainContainer">
+            <CustomPagination page={page} pages={data?.pages} />
+          </div>
         </>
   )
 }

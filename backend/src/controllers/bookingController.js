@@ -794,13 +794,13 @@ const getAllBooking = async (req, res, next) => {
 
         //PAGINATION
         const page = req.query.page * 1  || 1;
-        const limit = 50;
+        const limit = 5;
         const skip = (page - 1) * limit;
-
+        
         query = query.skip(skip).limit(limit);
 
+        const numBooking = await Booking.countDocuments();
         if(req.query.page){
-            const numBooking = await Booking.countDocuments();
             if(skip > numBooking) {
                 throw new Error("This page does not exist")
             }
@@ -809,7 +809,12 @@ const getAllBooking = async (req, res, next) => {
         //Execute Query
         const booking = await query;
 
-        res.status(StatusCodes.OK).json({ allBookings: booking })
+        res.status(StatusCodes.OK).json({ 
+            allBookings: booking,
+            totalBookings: numBooking,
+            pageNumber:page,
+            pages: Math.ceil(numBooking / limit),
+        })
     } catch (error) {
         next(error)
     }
