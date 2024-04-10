@@ -33,9 +33,9 @@ const App = () => {
               <Route element={<TourLayout />}>
                 {
                   window.location.hostname === 'localhost' ? (
-                    <Route path='/' element={<SplashMania />} />
-                  ) : (
                     <Route path='/' element={<ArasResturant />} />
+                  ) : (
+                    <Route path='/' element={<SplashMania />} />
                   )
                 }
                 <Route path='/date-select' element={<DateSelectionContainer />} />

@@ -84,6 +84,9 @@ const createBooking = async (req, res) => {
 }
 
 const successBooking = async (req, res, next) => {
+    const imgUrls = req.body.service === 'splash-mania' ? {bannerImg:"https://i.postimg.cc/15PZfQSw/Splash-Mania-Waterpark-Ticketin-Gamuda-Cove-Selangor-Klook-Malaysia.jpg", productImg: "https://i.postimg.cc/BnSswGw4/splashmania-newtagline-2022-2.png"} : req.body.service === 'aras-resturant' && {bannerImg:"https://i.postimg.cc/DzNRHTWH/6.jpg", productImg: "https://i.postimg.cc/5yggcB7y/IMG-20240129-WA0076.jpg"}
+
+    const dateFormatted = req.body.bookingDate.slice(4, 15)
 
     try {
         const isBookingIdExist = await Booking.find({bookingId: req.body.bookingId})
@@ -181,7 +184,7 @@ const successBooking = async (req, res, next) => {
                                                                         <table cellpadding="0" cellspacing="0" width="100%">
                                                                             <tbody>
                                                                                 <tr>
-                                                                                    <td align="center" class="esd-block-image" style="font-size: 0px;"><a target="_blank"><img class="adapt-img" src="https://res.cloudinary.com/drrkaak40/image/upload/v1708583400/Malaysia%20Experience/SKYCAB%20LANGKAWI/skycab_2_flcc17.jpg" alt style="display: block;" width="455"></a></td>
+                                                                                    <td align="center" class="esd-block-image" style="font-size: 0px;"><a target="_blank"><img class="adapt-img" src="${imgUrls.bannerImg}" alt style="display: block;" width="455"></a></td>
                                                                                 </tr>
                                                                             </tbody>
                                                                         </table>
@@ -214,7 +217,7 @@ const successBooking = async (req, res, next) => {
                                                                                 <tr>
                                                                                     <td align="center" class="esd-block-text" bgcolor="#ffffff">
                                                                                         <h2 style="line-height: 150%; color: #f26823; font-size: 16px;">BOOKING ID #${req.body.bookingId}</h2>
-                                                                                        <p style="line-height: 150%; color: #f26823; font-size: 16px;"><strong>Date of Reservation&nbsp;&nbsp;${req.body.bookingDate}</strong></p>
+                                                                                        <p style="line-height: 150%; color: #f26823; font-size: 16px;"><strong>Date of Reservation&nbsp;&nbsp;${dateFormatted}</strong></p>
                                                                                     </td>
                                                                                 </tr>
                                                                                 <tr>
@@ -254,7 +257,7 @@ const successBooking = async (req, res, next) => {
                                                                                         <table cellpadding="0" cellspacing="0" width="100%">
                                                                                             <tbody>
                                                                                                 <tr>
-                                                                                                    <td align="center" class="esd-block-image" style="font-size: 0px;"><a target="_blank"><img class="adapt-img" src="https://res.cloudinary.com/drrkaak40/image/upload/v1708583399/Malaysia%20Experience/SKYCAB%20LANGKAWI/skycab_8_zounyf.jpg" alt style="display: block;" height="200" width-"150"></a></td>
+                                                                                                    <td align="center" class="esd-block-image" style="font-size: 0px;"><a target="_blank"><img class="adapt-img" src="${imgUrls.productImg}" alt style="display: block;" height="200" width-"150"></a></td>
                                                                                                 </tr>
                                                                                             </tbody>
                                                                                         </table>
