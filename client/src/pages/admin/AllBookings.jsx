@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+// import axios from 'axios'
+// import { getBookingStart, getAllBookingSuccess} from '../../redux/features/bookingDetailsSlice';
 import {useDispatch, useSelector} from 'react-redux'
-import { getBookingStart, getAllBookingSuccess} from '../../redux/features/bookingDetailsSlice';
 import '../../styles/allBookings.scss'
 
 import BookingCard from '../../components/admin/BookingCard';
@@ -45,19 +45,23 @@ const AllBookings = () => {
     </div>
   }
   return (
-    
-    <div className='allBookingsMainContainer'>
-        <select name="service" id="" onChange={(e) => setOption(e.target.value)}>
-          <option value="">All</option>
-              <option value={"aras-resturant"}>Aras Resturant</option>
-              <option value={"splash-mania"}>Splash Mania</option>
-        </select>
-      <div className="allBookingsContainer">
-        {data?.allBookings.map((booking,index) => {
-          return <BookingCard key={booking._id} booking={booking} index={index} />
-        })}
+    <>
+      <div className='allBookingsMainContainer'>
+        <h1>Available Services</h1>
+          <p>Result : {data?.allBookings?.length}</p>
+
+          <select className='serviceSelect' name="service" id="" onChange={(e) => setOption(e.target.value)}>
+                <option value="">All Products</option>
+                <option value={"aras-resturant"}>Aras Resturant</option>
+                <option value={"splash-mania"}>Splash Mania</option>
+          </select>
+        </div>
+        <div className="allBookingsContainer">
+          {data?.allBookings.map((booking,index) => {
+            return <BookingCard key={booking._id} booking={booking} index={index} />
+          })}
       </div>
-    </div>
+        </>
   )
 }
 
