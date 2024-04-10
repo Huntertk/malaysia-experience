@@ -10,7 +10,7 @@ export const arasResturantCardData = [
             "https://i.postimg.cc/bvZBQB6T/8.jpg",
             "https://i.postimg.cc/MHq5rPYg/IMG-20240129-WA0075.jpg",
         ],
-        title:"Ticket to Aras Resturant",
+        title:"ARAS Restaurant KL Tower - Dinner Buffet",
         desc:"Make your special occasions more memorable by booking a window seat view and opting for the celebration setup, whole cake, and a flower bouquet.",
         type:"bookTypeOne",
         service:"aras-resturant",
@@ -55,6 +55,68 @@ export const arasResturantCardData = [
         inclusionAndExclusion:{
             cancellationPolicy:["These tickets can't be cancelled or rescheduled"],
             inclusion:["Entrance Tickets for Buffet Dinner"],
+            exclusion:[
+                "Parking",
+                "Food and Drink",
+                "Locker"
+            ]
+        }
+    },
+    {
+        _id: nanoid(),
+        image:[
+            "https://i.postimg.cc/TYwdzRhY/10.jpg",
+            "https://i.postimg.cc/BQQbJT73/2.jpg",
+            "https://i.postimg.cc/bvZBQB6T/8.jpg",
+            "https://i.postimg.cc/R0c47hpG/13.jpg",
+            "https://i.postimg.cc/ncPFZ6QK/15.jpg",
+            "https://i.postimg.cc/MpfWGdyC/12.jpg"
+        ],
+        title:"ARAS Restaurant KL Tower - Tea Buffet",
+        desc:"Make your special occasions more memorable by booking a window seat view and opting for the celebration setup, whole cake, and a flower bouquet.",
+        type:"bookTypeTwo",
+        service:"aras-resturant",
+        preference:[
+            {
+                title:"Malaysian",
+                price:{
+                    weekDays:{
+                        adult:105,
+                        child:66,
+                        senior:66,
+                    },
+                    weekEnds:{
+                        adult:105,
+                        child:66,
+                        senior:66,
+                    },
+                },
+                details:[
+                    "Valid only for Malaysian Citizens"
+                ]
+            },
+            {
+                title:"Non-Malaysian",
+                price:{
+                    weekDays:{
+                        adult:105,
+                        child:66,
+                        senior:66,
+                    },
+                    weekEnds:{
+                        adult:105,
+                        child:66,
+                        senior:66,
+                    },
+                },
+                details:[
+                    "Valid only for Non Malaysian Citizens"
+                ]
+            }
+        ],
+        inclusionAndExclusion:{
+            cancellationPolicy:["These tickets can't be cancelled or rescheduled"],
+            inclusion:["Entrance Tickets for Tea Dinner"],
             exclusion:[
                 "Parking",
                 "Food and Drink",
