@@ -54,11 +54,9 @@ export const arasResturantCardData = [
         ],
         inclusionAndExclusion:{
             cancellationPolicy:["These tickets can't be cancelled or rescheduled"],
-            inclusion:["Entrance Tickets for Buffet Dinner"],
+            inclusion:["Entrance Tickets for Dinner Buffet"],
             exclusion:[
                 "Parking",
-                "Food and Drink",
-                "Locker"
             ]
         }
     },
@@ -116,11 +114,9 @@ export const arasResturantCardData = [
         ],
         inclusionAndExclusion:{
             cancellationPolicy:["These tickets can't be cancelled or rescheduled"],
-            inclusion:["Entrance Tickets for Tea Dinner"],
+            inclusion:["Entrance Tickets for Tea Buffet"],
             exclusion:[
                 "Parking",
-                "Food and Drink",
-                "Locker"
             ]
         }
     },
