@@ -5,7 +5,7 @@ import '../../styles/allBookings.scss'
 import axios from 'axios'
 import toast from 'react-hot-toast'
 import { useDispatch } from 'react-redux';
-import {updateBookingStats} from '../../redux/features/bookingDetailsSlice'
+import {updateBookingStats} from '../../redux/features/bookingDetailsSlice';
 
 const BookingCard = (props) => {
   const dispatch = useDispatch()
@@ -46,7 +46,7 @@ const BookingCard = (props) => {
       </div>
         <span>Booking ID: #{bookingId}</span>
         <span>Order ID: {_id}</span>
-          <p>Date of Reservation : {bookingDate}</p>
+          <p>Date of Reservation : {format(bookingDate, 'PPP')}</p>
           <p>Reservation-Type : {bookingTitle}</p>
           { prefrence && <p>Citizen-Type : {prefrence}</p>}
           <p>Booked By : {name}</p>
