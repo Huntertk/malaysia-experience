@@ -6,6 +6,7 @@ const ArasResturantDateManage = () => {
       <h1>Splash Mania</h1>
       <div className="btnContainer">
         <Link to="/admin/manage-dates/aras-resturant/booktype-one">Dinner Buffet</Link>
+        <Link to="/admin/manage-dates/aras-resturant/booktype-two">Tea Buffet</Link>
       </div>
     </section>
   )

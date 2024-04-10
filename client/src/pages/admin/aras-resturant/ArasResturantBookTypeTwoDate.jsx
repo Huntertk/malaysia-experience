@@ -7,7 +7,7 @@ import toast from 'react-hot-toast'
 import moment from 'moment'
 import '../../../styles/manageDate.scss'
 
-const ArasResturantBookTypeOneDate = () => {
+const ArasResturantBookTypeTwoDate = () => {
   const [isLoading, setIsLoading] = useState(false)
     const [selectedDate, setSelectedDate] = useState("")
     const [isFetch, setIsFetch] = useState(false)
@@ -21,7 +21,7 @@ const ArasResturantBookTypeOneDate = () => {
       const addBlockDate = async () => {
         try {
           setIsLoading(true)
-            const {data} = await axios.post('/api/v1/aras-resturant-booktype-one-dates-manage/block-dates', {blockDates: dateToString})
+            const {data} = await axios.post('/api/v1/aras-resturant-booktype-two-dates-manage/block-dates', {blockDates: dateToString})
             toast.success("Date Blocked Successfully")
             setIsFetch(prev => !prev)
             setSelectedDate("")
@@ -33,7 +33,7 @@ const ArasResturantBookTypeOneDate = () => {
         
         const getBlockDates = async () => {
           try {
-            const {data} = await axios.get('/api/v1/aras-resturant-booktype-one-dates-manage/block-dates')
+            const {data} = await axios.get('/api/v1/aras-resturant-booktype-two-dates-manage/block-dates')
             setBlockedDates(data.blockDates)
           } catch (error) {
             console.log(error);
@@ -43,7 +43,7 @@ const ArasResturantBookTypeOneDate = () => {
         const removeBlockedDate = async (id) => {
           try {
             setIsLoading(true)
-            const res = await axios.delete(`/api/v1/aras-resturant-booktype-one-dates-manage/block-dates/${id}`)
+            const res = await axios.delete(`/api/v1/aras-resturant-booktype-two-dates-manage/block-dates/${id}`)
             setIsFetch(prev => !prev)
             setIsLoading(false)
           } catch (error) {
@@ -57,7 +57,7 @@ const ArasResturantBookTypeOneDate = () => {
 
   return (
     <div className='mainDateManageContainer'>
-        <h1>Aras Resturant Dinner Buffet<br /> Date Manage</h1>
+        <h1>Aras Resturant Tea Buffet<br /> Date Manage</h1>
         <DayPicker
                 defaultMonth={new Date(Date.now())}
                 mode="single"
@@ -91,4 +91,4 @@ const ArasResturantBookTypeOneDate = () => {
   )
 }
 
-export default ArasResturantBookTypeOneDate
+export default ArasResturantBookTypeTwoDate

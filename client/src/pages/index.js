@@ -17,8 +17,11 @@ import ArasResturantDateManage from "./admin/aras-resturant/ArasResturantDateMan
 import ArasResturantBookTypeOneDate from "./admin/aras-resturant/ArasResturantBookTypeOneDate";
 import PaymentSucess from "./PaymentSuccess";
 import ConfirmBooking from "./ConfirmBooking";
+import ArasResturantBookTypeTwoDate from "./admin/aras-resturant/ArasResturantBookTypeTwoDate";
+
 
 export {
+    ArasResturantBookTypeTwoDate,
     ConfirmBooking,
     PaymentSucess,
     ArasResturantBookTypeOneDate,

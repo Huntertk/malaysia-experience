@@ -4,6 +4,7 @@ import {
   AllBookings,
   ArasResturant,
   ArasResturantBookTypeOneDate,
+  ArasResturantBookTypeTwoDate,
   ArasResturantDateManage,
   CompanyDetails,
   ConfirmBooking,
@@ -52,8 +53,17 @@ const App = () => {
                   <Route element={<AdminLayout />}>
                     <Route path="/admin/all-booking" element={<AllBookings />} />
                     <Route path="/admin/manage-dates" element={<ManageDates />} />
-                    <Route path="/admin/manage-dates/splash-mania" element={<SplashMainaDateManage />} />
-                    <Route path="/admin/manage-dates/splash-mania/booktype-one" element={<SplashManiaBookTypeOneDate />} />
+                    {/*Splash Mania */}
+                    <Route 
+                      path="/admin/manage-dates/splash-mania" 
+                      element={<SplashMainaDateManage />} 
+                    />
+                    <Route 
+                      path="/admin/manage-dates/splash-mania/booktype-one" 
+                      element={<SplashManiaBookTypeOneDate />} 
+                    />
+
+                    {/**Aras Resturant */}
                     <Route 
                       path="/admin/manage-dates/aras-resturant" 
                       element={<ArasResturantDateManage />} 
@@ -61,6 +71,10 @@ const App = () => {
                     <Route 
                       path="/admin/manage-dates/aras-resturant/booktype-one" 
                       element={<ArasResturantBookTypeOneDate />} 
+                    />
+                    <Route 
+                      path="/admin/manage-dates/aras-resturant/booktype-two" 
+                      element={<ArasResturantBookTypeTwoDate />} 
                     />
                   </Route>
                 </Route>
