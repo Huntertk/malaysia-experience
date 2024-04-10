@@ -794,7 +794,7 @@ const getAllBooking = async (req, res, next) => {
 
         //PAGINATION
         const page = req.query.page * 1  || 1;
-        const limit = 5;
+        const limit = 100;
         const skip = (page - 1) * limit;
         
         query = query.skip(skip).limit(limit);

@@ -22,7 +22,7 @@ const AdminSmallSidebar = () => {
           to="/admin/all-booking"
           onClick={() => dispatch(adminSidebarClose())}
           ><VscGraph /> All Booking</NavLink>
-          <NavLink 
+          {/* <NavLink 
           to="/admin/confirmed-booking"
           onClick={() => dispatch(adminSidebarClose())}
           ><GiConfirmed /> Confirmed Booking</NavLink>
@@ -37,7 +37,7 @@ const AdminSmallSidebar = () => {
 
           <NavLink to="/admin/cancelled-booking"
            onClick={() => dispatch(adminSidebarClose())}
-          ><ImCancelCircle /> Cancelled Booking</NavLink>
+          ><ImCancelCircle /> Cancelled Booking</NavLink> */}
 
           <NavLink to="/admin/manage-dates"
            onClick={() => dispatch(adminSidebarClose())}

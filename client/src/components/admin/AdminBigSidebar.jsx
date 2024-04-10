@@ -14,12 +14,12 @@ const AdminBigSidebar = () => {
       <div className="bigSidebarContainer">
         <h1>Admin <RiAdminFill /></h1>
           <NavLink to="/admin/all-booking"><VscGraph /> All Booking</NavLink>
-          <NavLink 
+          {/* <NavLink 
           to="/admin/confirmed-booking"
           ><GiConfirmed /> Confirmed Booking</NavLink>
           <NavLink to="/admin/completed-booking"><AiFillCheckSquare /> Completed Booking</NavLink>
           <NavLink to="/admin/pending-booking"><MdOutlinePending /> Pending Booking</NavLink>
-          <NavLink to="/admin/cancelled-booking"><ImCancelCircle /> Cancelled Booking</NavLink>
+          <NavLink to="/admin/cancelled-booking"><ImCancelCircle /> Cancelled Booking</NavLink> */}
           <NavLink to="/admin/manage-dates"><IoCalendarNumberOutline /> Manages Dates</NavLink>
       </div>
     </aside>
