@@ -49,8 +49,8 @@ const createBooking = async (req, res) => {
                 },
             ],
             mode: 'payment',
-            success_url: `https://skycab-langkawi.malaysia-experience.com/${responseClientUrl}`,
-            cancel_url: 'https://skycab-langkawi.malaysia-experience.com/',
+            success_url: `http://localhost:5173/${responseClientUrl}`,
+            cancel_url: 'http://localhost:5173/',
             payment_intent_data: {
                 setup_future_usage: 'off_session',
                 description: 'Booking payment',

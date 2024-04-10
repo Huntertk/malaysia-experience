@@ -6,6 +6,7 @@ import {
   ArasResturantBookTypeOneDate,
   ArasResturantDateManage,
   CompanyDetails,
+  ConfirmBooking,
   HelpCenter,
   ManageDates,
   NotFound,
@@ -40,6 +41,7 @@ const App = () => {
                 <Route path='/date-select' element={<DateSelectionContainer />} />
                 <Route path='/booking' element={<Booking />} />
                 <Route path={`/${responseClientUrl}`} element={<PaymentSucess />} />
+                <Route path="/bookingconfirm" element={<ConfirmBooking />} />
                 <Route path="/terms" element={<TermAndConditionPage />} />
                 <Route path="/privacypolicy" element={<PrivacyPolicy />} />
                 <Route path="/companydetails" element={<CompanyDetails />} />

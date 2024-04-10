@@ -16,8 +16,10 @@ import SplashManiaBookTypeOneDate from "./admin/splash-mania/SplashManiaBookType
 import ArasResturantDateManage from "./admin/aras-resturant/ArasResturantDateManage";
 import ArasResturantBookTypeOneDate from "./admin/aras-resturant/ArasResturantBookTypeOneDate";
 import PaymentSucess from "./PaymentSuccess";
+import ConfirmBooking from "./ConfirmBooking";
 
 export {
+    ConfirmBooking,
     PaymentSucess,
     ArasResturantBookTypeOneDate,
     ArasResturantDateManage,

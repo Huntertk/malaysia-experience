@@ -25,7 +25,6 @@ const PaymentSucess = () => {
     adultTotal,
     childTotal,
     service
-
   } = useSelector(store => store.booking)
   const dispatch = useDispatch()
   const url = bookingResponse?.split('/')
