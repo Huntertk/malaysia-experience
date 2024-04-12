@@ -318,23 +318,32 @@ export const sunwayLagoonHighlighhtsData = [
 
 //Additional Information
 
-export const splashManiaAdditionInfoData = [
+export const sunwayLagoonAdditionInfoData = [
     {
         id: nanoid(),
         ques:"Operating Hours ?",
         ans:[
-            "Thursday - Tuesday : 10am - 6pm", 
-            "(Closed on Wednesday EXCEPT during Malaysia public holidays and school holidays)",
-            "Ramadan Promo Operation Hours (12 March to 9 April 2024)"
+            "Opens everyday from 10am - 11pm", 
+            "Close every Tuesday except Public and School holiday.",
+            "Night Park starts at 6pm - 11pm"
         ]
     },
     {
         id: nanoid(),
         ques:"Child Policy",
         ans:[
-            "Adult: Height 110cm above.",
-            "Child height 90cm to 110cm",
+            "Adult age is 12 to 59 years old.",
+            "Child age is  3 to 11 years old.",
+            "Below 90cm Free.",
             "Senior Citizen age 60 and above."
+        ]
+    },
+    {
+        id: nanoid(),
+        ques:"Ticket Inclusion",
+        ans:[
+            "Full day Ticket: Waterpark, Scream Park, Amusement Park, WildlifePark, Nickelodeon Lost Lagoon, Extreme Park & Night Park.",
+            "Night Park: Lost City of Gold, Carousel, Wagon Wheel, GrandCanyon,Colorado, Vultures & Butch Cassidy.",
         ]
     },
     {
@@ -349,39 +358,59 @@ export const splashManiaAdditionInfoData = [
         ques:"Redemption Guide",
         ans:["Upon arrival, show your ticket/e-voucher at the counter"]
     },
+    {
+        id: nanoid(),
+        ques:"Ticket Validity",
+        ans:["The tickets are fixed dated tickets. And no re-entry allowed."]
+    },
 ]
 
 
 //FAQ
-export const splashManiaTourHomeFAQ = [
+export const sunwayLagoonTourHomeFAQ = [
     {
         id: nanoid(),
-        ques:"When does Splash Mania close ?",
-        ans:["Splash Mania Waterpark is close every Wednesday except Public Holiday and School Holiday."]
+        ques:"Can I bring food inside Sunway Lagoon ?",
+        ans:["No. Food and drinks is prohibited inside."]
     },
     {
         id: nanoid(),
-        ques:"How long should I plan for Splash Mania?",
-        ans:["You can enjoy all rides unlimitedly within the time frame 10am to 6pm."]
+        ques:"Does my 2 years old baby need to buy ticket to enter Sunway Lagoon ?",
+        ans:["No, Child below 90cm can enter for FREE."]
     },
     {
         id: nanoid(),
-        ques:"Can I bring mineral water on my own?",
-        ans:["No. Outside food and water not allowed."]
+        ques:"How long can I stay inside Sunway Lagoon ?",
+        ans:["You may stay as long as you want, no time limit."]
     },
     {
         id: nanoid(),
-        ques:"Does my ticket includes Locker and Tubes?",
+        ques:"When does Sunway Lagoon close ?",
+        ans:["Sunway Lagoon is close every Tuesday except for Public Holiday and School Holiday."]
+    },
+    {
+        id: nanoid(),
+        ques:"Does my ticket includes Locker and Tubes ?",
         ans:["No, its not included, but there are stations everywhere inside the park where guest may rent the items needed."]
     },
     {
         id: nanoid(),
-        ques:"What are the games includes in my tickets",
-        ans:["All games in the park except pay-per-rides like SurfMania, Zoomi's Runaway and Sky Leap."]
+        ques:"Is all games included in my ticket ?",
+        ans:["Yes all included except for Paid Games; Buggy Jump, G-Force X and GoKart"]
     },
     {
         id: nanoid(),
-        ques:"If my child is more than 120cm, can i buy Child Ticket ?",
-        ans:["No Child above 120cm will be considered as adult."]
+        ques:"Can I enter Night park if I buy Full Day Ticket ?",
+        ans:["Yes, Customer who have Full Day Ticket may enjoy night park as well by staying inside the park as no re-entry is allowed."]
+    },
+    {
+        id: nanoid(),
+        ques:"Can I buy Only Quack Express Tickets if I already have Annual Pass ?",
+        ans:["For Annual Pass Holders, you may buy Quack Express tickets only separatelyifyou want to enjoy Express Lane Privilege."]
+    },
+    {
+        id: nanoid(),
+        ques:"Can I buy Quack Express Tickets only to enter Sunway Lagoon ?",
+        ans:["No. Quack Express is only add on ticket. You are required to have admission ticketsto enter the park."]
     },
 ]
