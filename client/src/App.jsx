@@ -60,6 +60,8 @@ const App = () => {
                 <Route path="/companydetails" element={<CompanyDetails />} />
                 <Route path="/helpcenter" element={<HelpCenter />} />
               </Route>
+              
+               {/*Admin Routes */}
                 <Route path="/admin/login" element={<AdminLogin />} />
                 <Route element={<AdminProtectedRoute />}>
                   <Route element={<AdminLayout />}>
@@ -93,23 +95,19 @@ const App = () => {
                     <Route 
                       path="/admin/manage-dates/sunway-lagoon" 
                       element={<SunwayLagoonDateManage />} 
-                    />
-                    
+                    />  
                       <Route 
                       path="/admin/manage-dates/sunway-lagoon/booktype-one" 
                       element={<SunwayLagoonBookTypeOneDate />} 
                     />
-
                     <Route 
                       path="/admin/manage-dates/sunway-lagoon/booktype-two" 
                       element={<SunwayLagoonBookTypeTwoDate />} 
                     />
-
                     <Route 
                       path="/admin/manage-dates/sunway-lagoon/booktype-three" 
                       element={<SunwayLagoonBookTypeThreeDate />} 
                     />
-
                     <Route 
                       path="/admin/manage-dates/sunway-lagoon/booktype-four" 
                       element={<SunwayLagoonBookTypeFourDate />} 

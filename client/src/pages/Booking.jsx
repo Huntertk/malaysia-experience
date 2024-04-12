@@ -32,9 +32,9 @@ const Booking = () => {
     const dispatch = useDispatch()
     const responseClientUrl = nanoid()
 
-    const bannerImg = service === 'splash-mania' ? "https://i.postimg.cc/15PZfQSw/Splash-Mania-Waterpark-Ticketin-Gamuda-Cove-Selangor-Klook-Malaysia.jpg" : service === 'aras-resturant' ? "https://i.postimg.cc/j5VZydnx/IMG-20240129-WA0073.jpg" : ""
+    const bannerImg = service === 'splash-mania' ? "https://i.postimg.cc/15PZfQSw/Splash-Mania-Waterpark-Ticketin-Gamuda-Cove-Selangor-Klook-Malaysia.jpg" : service === 'aras-resturant' ? "https://i.postimg.cc/j5VZydnx/IMG-20240129-WA0073.jpg" : service === 'sunway-lagoon' ? "https://i.postimg.cc/SQ3jTkPk/1-1.jpg" : ""
 
-
+    
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {

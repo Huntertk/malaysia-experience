@@ -52,10 +52,46 @@ const bookingSlice = createSlice({
                 }  else if(state.pref === 'Non-Malaysian') {
                     state.adultTotal = state.adultCount *  state.prefrenceOpt[1].price.weekDays.adult
                 }
+            } else if(state.type === 'bookTypeTwo'){
+                if(state.pref === "Malaysian") {
+                    state.adultTotal = state.adultCount *  state.prefrenceOpt[0].price.weekDays.adult
+                }  else if(state.pref === 'Non-Malaysian') {
+                    state.adultTotal = state.adultCount *  state.prefrenceOpt[1].price.weekDays.adult
+                }
+            } else if(state.type === 'bookTypeThree'){
+                if(state.pref === "Malaysian") {
+                    state.adultTotal = state.adultCount *  state.prefrenceOpt[0].price.weekDays.adult
+                }  else if(state.pref === 'Non-Malaysian') {
+                    state.adultTotal = state.adultCount *  state.prefrenceOpt[1].price.weekDays.adult
+                }
+            } else if(state.type === 'bookTypeFour'){
+                if(state.pref === "Malaysian") {
+                    state.adultTotal = state.adultCount *  state.prefrenceOpt[0].price.weekDays.adult
+                }  else if(state.pref === 'Non-Malaysian') {
+                    state.adultTotal = state.adultCount *  state.prefrenceOpt[1].price.weekDays.adult
+                }
             }
         },
         childTotalAmount: (state) => {
             if(state.type === 'bookTypeOne'){
+                if(state.pref === "Malaysian") {
+                    state.childTotal = state.childCount *  state.prefrenceOpt[0].price.weekDays.child
+                }  else if(state.pref === 'Non-Malaysian') {
+                    state.childTotal = state.childCount *  state.prefrenceOpt[1].price.weekDays.child
+                }
+            } else if(state.type === 'bookTypeTwo'){
+                if(state.pref === "Malaysian") {
+                    state.childTotal = state.childCount *  state.prefrenceOpt[0].price.weekDays.child
+                }  else if(state.pref === 'Non-Malaysian') {
+                    state.childTotal = state.childCount *  state.prefrenceOpt[1].price.weekDays.child
+                }
+            } else if(state.type === 'bookTypeThree'){
+                if(state.pref === "Malaysian") {
+                    state.childTotal = state.childCount *  state.prefrenceOpt[0].price.weekDays.child
+                }  else if(state.pref === 'Non-Malaysian') {
+                    state.childTotal = state.childCount *  state.prefrenceOpt[1].price.weekDays.child
+                }
+            } else if(state.type === 'bookTypeFour'){
                 if(state.pref === "Malaysian") {
                     state.childTotal = state.childCount *  state.prefrenceOpt[0].price.weekDays.child
                 }  else if(state.pref === 'Non-Malaysian') {

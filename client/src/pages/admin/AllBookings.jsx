@@ -56,6 +56,7 @@ const AllBookings = () => {
                 <option value="">All Products</option>
                 <option value={"aras-resturant"}>Aras Resturant</option>
                 <option value={"splash-mania"}>Splash Mania</option>
+                <option value={"sunway-lagoon"}>Sunway Lagoon</option>
           </select>
         </div>
         {
