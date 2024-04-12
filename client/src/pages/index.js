@@ -19,8 +19,18 @@ import PaymentSucess from "./PaymentSuccess";
 import ConfirmBooking from "./ConfirmBooking";
 import ArasResturantBookTypeTwoDate from "./admin/aras-resturant/ArasResturantBookTypeTwoDate";
 import SunwayLagoon from "./sunway-lagoon/SunwayLagoon";
+import SunwayLagoonBookTypeFourDate from "./admin/sunwayLagoon/SunwayLagoonBookTypeFourDate";
+import SunwayLagoonBookTypeOneDate from "./admin/sunwayLagoon/SunwayLagoonBookTypeOneDate";
+import SunwayLagoonBookTypeThreeDate from "./admin/sunwayLagoon/SunwayLagoonBookTypeThreeDate";
+import SunwayLagoonBookTypeTwoDate from "./admin/sunwayLagoon/SunwayLagoonBookTypeTwoDate";
+import SunwayLagoonDateManage from "./admin/sunwayLagoon/SunwayLagoonDateManage";
 
 export {
+    SunwayLagoonDateManage,
+    SunwayLagoonBookTypeOneDate,
+    SunwayLagoonBookTypeTwoDate,
+    SunwayLagoonBookTypeThreeDate,
+    SunwayLagoonBookTypeFourDate,
     SunwayLagoon,
     ArasResturantBookTypeTwoDate,
     ConfirmBooking,
