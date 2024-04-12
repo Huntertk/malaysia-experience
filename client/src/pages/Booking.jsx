@@ -34,7 +34,8 @@ const Booking = () => {
 
     const bannerImg = service === 'splash-mania' ? "https://i.postimg.cc/15PZfQSw/Splash-Mania-Waterpark-Ticketin-Gamuda-Cove-Selangor-Klook-Malaysia.jpg" : service === 'aras-resturant' ? "https://i.postimg.cc/j5VZydnx/IMG-20240129-WA0073.jpg" : service === 'sunway-lagoon' ? "https://i.postimg.cc/SQ3jTkPk/1-1.jpg" : ""
 
-    
+    const hostName = window.location.hostname;
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
@@ -53,7 +54,8 @@ const Booking = () => {
                 bookingType: type,
                 responseClientUrl,
                 pref,
-                service
+                service,
+                hostName
             })
             const response = res.data;
             const {data} = await axios.get('/api/v1/booking/totalbooking')

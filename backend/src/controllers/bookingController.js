@@ -21,7 +21,8 @@ const createBooking = async (req, res) => {
         bookingTitle,
         responseClientUrl,
         service,
-        pref
+        pref,
+        hostName
     } = req.body;
     try {
         const session = await stripe.checkout.sessions.create({
@@ -29,7 +30,8 @@ const createBooking = async (req, res) => {
             line_items: [
                 {
                     price_data: {
-                        currency: 'myr',
+                        // currency: 'myr',
+                        currency: 'inr',
                         product_data: {
                             name: bookingTitle,
                             metadata:{
@@ -49,8 +51,8 @@ const createBooking = async (req, res) => {
                 },
             ],
             mode: 'payment',
-            success_url: `http://localhost:5173/${responseClientUrl}`,
-            cancel_url: 'http://localhost:5173/',
+            success_url: `http://${hostName}:5173/${responseClientUrl}`,
+            cancel_url: `http://${hostName}:5173/`,
             payment_intent_data: {
                 setup_future_usage: 'off_session',
                 description: 'Booking payment',
@@ -84,7 +86,7 @@ const createBooking = async (req, res) => {
 }
 
 const successBooking = async (req, res, next) => {
-    const imgUrls = req.body.service === 'splash-mania' ? {bannerImg:"https://i.postimg.cc/15PZfQSw/Splash-Mania-Waterpark-Ticketin-Gamuda-Cove-Selangor-Klook-Malaysia.jpg", productImg: "https://i.postimg.cc/BnSswGw4/splashmania-newtagline-2022-2.png"} : req.body.service === 'aras-resturant' && {bannerImg:"https://i.postimg.cc/DzNRHTWH/6.jpg", productImg: "https://i.postimg.cc/5yggcB7y/IMG-20240129-WA0076.jpg"}
+    const imgUrls = req.body.service === 'splash-mania' ? {bannerImg:"https://i.postimg.cc/15PZfQSw/Splash-Mania-Waterpark-Ticketin-Gamuda-Cove-Selangor-Klook-Malaysia.jpg", productImg: "https://i.postimg.cc/BnSswGw4/splashmania-newtagline-2022-2.png"} : req.body.service === 'aras-resturant' ? {bannerImg:"https://i.postimg.cc/DzNRHTWH/6.jpg", productImg: "https://i.postimg.cc/5yggcB7y/IMG-20240129-WA0076.jpg"}  : req.body.service === 'sunway-lagoon' && {bannerImg:"https://i.postimg.cc/SQ3jTkPk/1-1.jpg", productImg: "https://i.postimg.cc/qqhqJ5zP/5.jpg"} 
 
     const dateFormatted = req.body.bookingDate.slice(4, 15)
 
