@@ -33,15 +33,19 @@ const App = () => {
       <Toaster />
           <Routes>
               <Route element={<TourLayout />}>
-                {
-                  window.location.hostname === 'atmosphere360.malaysia-experience' ? (
-                    <Route path='/' element={<ArasResturant />} />
-                  ) : window.location.hostname === 'splashmania.malaysia-experience' ? (
-                    <Route path='/' element={<SplashMania />} />
-                  ) : (
-                    <Route path='/' element={<SunwayLagoon />} />
-                  )
-                }
+              <Route 
+              path='/' 
+              element={
+                window.location.hostname === 'atmosphere360.malaysia-experience' ? (
+                    <ArasResturant />
+                ) : window.location.hostname === 'splashmania.malaysia-experience' ? (
+                    <SplashMania />
+                ) : (
+                  <SunwayLagoon />
+                )
+              } 
+            />
+                
                 <Route path='/date-select' element={<DateSelectionContainer />} />
                 <Route path='/booking' element={<Booking />} />
                 <Route path={`/${responseClientUrl}`} element={<PaymentSucess />} />
