@@ -7,7 +7,7 @@ const TourWhyVisit = ({whyVisitData, serviceName}) => {
         <h1>Why You Need to Visit {serviceName} ?</h1>
         <div className="tourHomeWhyVisitCardContainer">
             <div className="listData" style={{
-                gridTemplateColumns:`repeat(${whyVisitData.length}, 350px)`
+                gridTemplateColumns:`repeat(${whyVisitData.length}, 350px)`,
             }}>
                 {
                     whyVisitData.map((data) => {

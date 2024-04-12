@@ -18,9 +18,10 @@ import ArasResturantBookTypeOneDate from "./admin/aras-resturant/ArasResturantBo
 import PaymentSucess from "./PaymentSuccess";
 import ConfirmBooking from "./ConfirmBooking";
 import ArasResturantBookTypeTwoDate from "./admin/aras-resturant/ArasResturantBookTypeTwoDate";
-
+import SunwayLagoon from "./sunway-lagoon/SunwayLagoon";
 
 export {
+    SunwayLagoon,
     ArasResturantBookTypeTwoDate,
     ConfirmBooking,
     PaymentSucess,

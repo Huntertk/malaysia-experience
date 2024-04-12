@@ -16,6 +16,7 @@ import {
   SplashMainaDateManage,
   SplashMania,
   SplashManiaBookTypeOneDate,
+  SunwayLagoon,
   TermAndConditionPage,
  } from './pages'
 import { AdminLayout, DateSelectionContainer, TourLayout } from './components'
@@ -33,10 +34,12 @@ const App = () => {
           <Routes>
               <Route element={<TourLayout />}>
                 {
-                  window.location.hostname === 'localhost' ? (
+                  window.location.hostname === 'atmosphere360.malaysia-experience' ? (
                     <Route path='/' element={<ArasResturant />} />
-                  ) : (
+                  ) : window.location.hostname === 'splashmania.malaysia-experience' ? (
                     <Route path='/' element={<SplashMania />} />
+                  ) : (
+                    <Route path='/' element={<SunwayLagoon />} />
                   )
                 }
                 <Route path='/date-select' element={<DateSelectionContainer />} />
