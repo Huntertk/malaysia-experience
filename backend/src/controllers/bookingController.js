@@ -50,8 +50,8 @@ const createBooking = async (req, res) => {
                 },
             ],
             mode: 'payment',
-            success_url: `http://${hostName}/${responseClientUrl}`,
-            cancel_url: `http://${hostName}/`,
+            success_url: `https://${hostName}/${responseClientUrl}`,
+            cancel_url: `https://${hostName}/`,
             payment_intent_data: {
                 setup_future_usage: 'off_session',
                 description: 'Booking payment',
