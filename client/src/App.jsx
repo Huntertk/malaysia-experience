@@ -41,13 +41,13 @@ const App = () => {
               <Route 
               path='/' 
               element={
-                window.location.hostname === 'atmosphere360.malaysia-experience' ? (
+                window.location.hostname === 'atmosphere360.malaysia-experience.com' ? (
                     <ArasResturant />
-                ) : window.location.hostname === 'splashmania.malaysia-experience' ? (
+                ) : window.location.hostname === 'splashmania.malaysia-experience.com' ? (
                     <SplashMania />
-                ) : (
+                ) : window.location.hostname === 'sunwaylagoon.malaysia-experience.com' ? (
                   <SunwayLagoon />
-                )
+                ) : <NotFound />
               } 
             />
                 
