@@ -109,7 +109,7 @@ const DateSelectionContainer = () => {
         const [blockedDates, setBlockedDates] = useState([])
         const disabledDates = blockedDates?.map((dates) => new Date(dates.blockDates))
         const [isLoading, setIsLoading] = useState(false);
-        console.log(disabledDates);
+        
         const disabledDays = [
             ...disabledDates
           ];
@@ -125,62 +125,7 @@ const DateSelectionContainer = () => {
               }
           }
 
-          const getBookTypeTwoBlockDates = async () => {
-            try {
-                setIsLoading(true)
-                const {data} = await axios.get(`/api/v1/${service}-booktype-two-dates-manage/block-dates`)
-                setBlockedDates(data.blockDates)
-                setIsLoading(false)
-              } catch (error) {
-                  console.log(error);
-              }
-          }
-
-          const getBookTypeThreeBlockDates = async () => {
-            try {
-                setIsLoading(true)
-                const {data} = await axios.get(`/api/v1/${service}-booktype-three-dates-manage/block-dates`)
-                setBlockedDates(data.blockDates)
-                setIsLoading(false)
-              } catch (error) {
-                  console.log(error);
-              }
-          }
-
-          const getBookTypeFourBlockDates = async () => {
-            try {
-                setIsLoading(true)
-                const {data} = await axios.get(`/api/v1/${service}-booktype-four-dates-manage/block-dates`)
-                setBlockedDates(data.blockDates)
-                setIsLoading(false)
-              } catch (error) {
-                  console.log(error);
-              }
-          }
-
-          const getBookTypeFiveBlockDates = async () => {
-            try {
-                setIsLoading(true)
-                const {data} = await axios.get(`/api/v1/${service}-booktype-five-dates-manage/block-dates`)
-                setBlockedDates(data.blockDates)
-                setIsLoading(false)
-              } catch (error) {
-                  console.log(error);
-              }
-          }
-
         useEffect(() => {
-            // if(type === 'bookTypeOne'){
-            //     getBookTypeOneBlockDates()
-            // } else if(type === 'bookTypeTwo'){
-            //     getBookTypeTwoBlockDates()
-            // } else if(type === 'bookTypeThree') {
-            //     getBookTypeThreeBlockDates()
-            // } else if(type === 'bookTypeFour') {
-            //     getBookTypeFourBlockDates()
-            // } else if(type === 'bookTypeFive') {
-            //     getBookTypeFiveBlockDates()
-            // }
             getBooklockDates()
           },[])
 

@@ -42,12 +42,12 @@ const App = () => {
               path='/' 
               element={
                 window.location.hostname === 'atmosphere360.malaysia-experience.com' ? (
-                  <SplashMania />
+                  <ArasResturant />
                 ) : window.location.hostname === 'splashmania.malaysia-experience.com' ? (
-                  <NotFound />
+                  <SplashMania />
                 ) : window.location.hostname === 'sunwaylagoon.malaysia-experience.com' ? (
                   <SunwayLagoon />
-                ) : <ArasResturant />
+                ) : <SplashMania />
               } 
             />
                 
