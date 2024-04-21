@@ -17,11 +17,11 @@ const SunwayLagoonBookTypeTwoDate = () => {
       function isPastDate(date) {
         return differenceInCalendarDays(date, new Date()) < 0;
       }
-
+      
       const addBlockDate = async () => {
         try {
           setIsLoading(true)
-            const {data} = await axios.post('/api/v1/sunway-lagoon-booktype-two-dates-manage/block-dates', {blockDates: dateToString})
+            const {data} = await axios.post('/api/v1/dates-manage/block-dates', {blockDates: dateToString, service:"sunway-lagoon", type: "bookTypeTwo"})
             toast.success("Date Blocked Successfully")
             setIsFetch(prev => !prev)
             setSelectedDate("")
@@ -33,7 +33,7 @@ const SunwayLagoonBookTypeTwoDate = () => {
         
         const getBlockDates = async () => {
           try {
-            const {data} = await axios.get('/api/v1/sunway-lagoon-booktype-two-dates-manage/block-dates')
+            const {data} = await axios.get(`/api/v1/dates-manage/block-dates?service=sunway-lagoon&type=bookTypeTwo`)
             setBlockedDates(data.blockDates)
           } catch (error) {
             console.log(error);
@@ -43,7 +43,7 @@ const SunwayLagoonBookTypeTwoDate = () => {
         const removeBlockedDate = async (id) => {
           try {
             setIsLoading(true)
-            const res = await axios.delete(`/api/v1/sunway-lagoon-booktype-two-dates-manage/block-dates/${id}`)
+            const res = await axios.delete(`/api/v1/dates-manage/block-dates/${id}`)
             setIsFetch(prev => !prev)
             setIsLoading(false)
           } catch (error) {
