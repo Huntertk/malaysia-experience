@@ -109,15 +109,15 @@ const DateSelectionContainer = () => {
         const [blockedDates, setBlockedDates] = useState([])
         const disabledDates = blockedDates?.map((dates) => new Date(dates.blockDates))
         const [isLoading, setIsLoading] = useState(false);
-        
+        console.log(disabledDates);
         const disabledDays = [
             ...disabledDates
           ];
 
-          const getBookTypeOneBlockDates = async () => {
+          const getBooklockDates = async () => {
             try {
                 setIsLoading(true)
-                const {data} = await axios.get(`/api/v1/${service}-booktype-one-dates-manage/block-dates`)
+                const {data} = await axios.get(`/api/v1/dates-manage/block-dates?service=${service}&type=${type}`)
                 setBlockedDates(data.blockDates)
                 setIsLoading(false)
               } catch (error) {
@@ -170,17 +170,18 @@ const DateSelectionContainer = () => {
           }
 
         useEffect(() => {
-            if(type === 'bookTypeOne'){
-                getBookTypeOneBlockDates()
-            } else if(type === 'bookTypeTwo'){
-                getBookTypeTwoBlockDates()
-            } else if(type === 'bookTypeThree') {
-                getBookTypeThreeBlockDates()
-            } else if(type === 'bookTypeFour') {
-                getBookTypeFourBlockDates()
-            } else if(type === 'bookTypeFive') {
-                getBookTypeFiveBlockDates()
-            }
+            // if(type === 'bookTypeOne'){
+            //     getBookTypeOneBlockDates()
+            // } else if(type === 'bookTypeTwo'){
+            //     getBookTypeTwoBlockDates()
+            // } else if(type === 'bookTypeThree') {
+            //     getBookTypeThreeBlockDates()
+            // } else if(type === 'bookTypeFour') {
+            //     getBookTypeFourBlockDates()
+            // } else if(type === 'bookTypeFive') {
+            //     getBookTypeFiveBlockDates()
+            // }
+            getBooklockDates()
           },[])
 
           

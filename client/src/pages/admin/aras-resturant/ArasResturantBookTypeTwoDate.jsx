@@ -9,51 +9,51 @@ import '../../../styles/manageDate.scss'
 
 const ArasResturantBookTypeTwoDate = () => {
   const [isLoading, setIsLoading] = useState(false)
-    const [selectedDate, setSelectedDate] = useState("")
-    const [isFetch, setIsFetch] = useState(false)
-    const [blockedDates, setBlockedDates] = useState([])
-    const disabledDays = blockedDates?.map((dates) => new Date(dates.blockDates))
-      const dateToString = selectedDate?.toString();
-      function isPastDate(date) {
-        return differenceInCalendarDays(date, new Date()) < 0;
+  const [selectedDate, setSelectedDate] = useState("")
+  const [isFetch, setIsFetch] = useState(false)
+  const [blockedDates, setBlockedDates] = useState([])
+  const disabledDays = blockedDates?.map((dates) => new Date(dates.blockDates))
+    const dateToString = selectedDate?.toString();
+    function isPastDate(date) {
+      return differenceInCalendarDays(date, new Date()) < 0;
+    }
+    
+    const addBlockDate = async () => {
+      try {
+        setIsLoading(true)
+          const {data} = await axios.post('/api/v1/dates-manage/block-dates', {blockDates: dateToString, service:"aras-resturant", type: "bookTypeTwo"})
+          toast.success("Date Blocked Successfully")
+          setIsFetch(prev => !prev)
+          setSelectedDate("")
+          setIsLoading(false)
+        } catch (error) {
+          console.log(error);
+        }
       }
-
-      const addBlockDate = async () => {
+      
+      const getBlockDates = async () => {
+        try {
+          const {data} = await axios.get(`/api/v1/dates-manage/block-dates?service=aras-resturant&type=bookTypeTwo`)
+          setBlockedDates(data.blockDates)
+        } catch (error) {
+          console.log(error);
+        }
+      }
+      
+      const removeBlockedDate = async (id) => {
         try {
           setIsLoading(true)
-            const {data} = await axios.post('/api/v1/aras-resturant-booktype-two-dates-manage/block-dates', {blockDates: dateToString})
-            toast.success("Date Blocked Successfully")
-            setIsFetch(prev => !prev)
-            setSelectedDate("")
-            setIsLoading(false)
-          } catch (error) {
-            console.log(error);
-          }
+          const res = await axios.delete(`/api/v1/dates-manage/block-dates/${id}`)
+          setIsFetch(prev => !prev)
+          setIsLoading(false)
+        } catch (error) {
+          console.log(error);
         }
-        
-        const getBlockDates = async () => {
-          try {
-            const {data} = await axios.get('/api/v1/aras-resturant-booktype-two-dates-manage/block-dates')
-            setBlockedDates(data.blockDates)
-          } catch (error) {
-            console.log(error);
-          }
-        }
-        
-        const removeBlockedDate = async (id) => {
-          try {
-            setIsLoading(true)
-            const res = await axios.delete(`/api/v1/aras-resturant-booktype-two-dates-manage/block-dates/${id}`)
-            setIsFetch(prev => !prev)
-            setIsLoading(false)
-          } catch (error) {
-            console.log(error);
-          }
-        }
+      }
 
-        useEffect(() => {
-        getBlockDates()
-      },[selectedDate, isFetch])
+      useEffect(() => {
+      getBlockDates()
+    },[selectedDate, isFetch])
 
   return (
     <div className='mainDateManageContainer'>
