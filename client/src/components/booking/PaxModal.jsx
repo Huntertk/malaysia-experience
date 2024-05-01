@@ -76,55 +76,58 @@ const PaxModal = ({selectedDate}) => {
     const navigate = useNavigate()
 
   return (
-    <div className='paxSelectorContainer'>
-        <div className='cancelBookingContainer'>
-            <button  className='backIcon' onClick={() => dispatch(closePaxModel())}>Back</button>
-            <button  className='crossIcon' onClick={() => {
-                dispatch(cancelBooking())
-                return navigate("/")
-            }}>Cancel</button>
-        </div>
-        <p className='bookingType'>{bookingTitle}</p>
-        {pref && <p className='bookingType'>{pref}</p>}
-        <h1>Select number of tickets</h1>
-        <div className="paxSelector">
-                <Pax  
-                category ={"Adult"} 
-                ageText={"13 to 59 yrs"} 
-                count={adultCount}
-                actionType={{
-                    increase: adultCountIncrease,
-                    decrease: adultCountDecrease
-                }}
-                total={adultTotal}
-                />
-                <Pax  
-                category ={"Child"} 
-                ageText={"3 to 12 yrs"} 
-                count={childCount}
-                actionType={{
-                    increase: childCountIncrease,
-                    decrease: childCountDecrease
-                }}
-                total={childTotal}
-                />
-        </div>
-            <div className="totalPayable">
-                <span>Total</span>
-               <span>MYR {totalAmount}</span>
-            </div>
-            
-        <div className="dateContainer">
 
-                <p>{format(bookingDate, 'PPP')}  </p> 
-                {
-                    totalAmount > 0 &&
-                    <Link to="/booking"><button>Next</button></Link> 
-                    
-                }
-            
-        </div>
+    <div className="paxSelectorMainContainer">
+        <div className='paxSelectorContainer'>
+            <div className='cancelBookingContainer'>
+                <button  className='backIcon' onClick={() => dispatch(closePaxModel())}>Back</button>
+                <button  className='crossIcon' onClick={() => {
+                    dispatch(cancelBooking())
+                    return navigate("/")
+                }}>Cancel</button>
+            </div>
+            <p className='bookingType'>{bookingTitle}</p>
+            {pref && <p className='bookingType'>{pref}</p>}
+            <h1>Select number of tickets</h1>
+            <div className="paxSelector">
+                    <Pax  
+                    category ={"Adult"} 
+                    ageText={"13 to 59 yrs"} 
+                    count={adultCount}
+                    actionType={{
+                        increase: adultCountIncrease,
+                        decrease: adultCountDecrease
+                    }}
+                    total={adultTotal}
+                    />
+                    <Pax  
+                    category ={"Child"} 
+                    ageText={"3 to 12 yrs"} 
+                    count={childCount}
+                    actionType={{
+                        increase: childCountIncrease,
+                        decrease: childCountDecrease
+                    }}
+                    total={childTotal}
+                    />
+            </div>
+                <div className="totalPayable">
+                    <span>Total</span>
+                <span>MYR {totalAmount}</span>
+                </div>
                 
+            <div className="dateContainer">
+
+                    <p>{format(bookingDate, 'PPP')}  </p> 
+                    {
+                        totalAmount > 0 &&
+                        <Link to="/booking"><button>Next</button></Link> 
+                        
+                    }
+                
+            </div>
+                    
+        </div>
     </div>
   )
 }
