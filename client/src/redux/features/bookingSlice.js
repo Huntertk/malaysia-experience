@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { setBookingDetailsFromLocalStorage, getBookingDetailsFromLocalStorage } from "../../utils/localStorage";
+import toast from 'react-hot-toast';
 
 
 const initialState = {
@@ -116,7 +117,7 @@ const bookingSlice = createSlice({
         }, 
         cancelBooking: (state) => {
             setBookingDetailsFromLocalStorage(initialState)
-            toast.warning("Booking Cancel")
+            toast.error("Booking Cancel")
             return state = initialState
         }, 
         bookingStart: (state,action) =>{
