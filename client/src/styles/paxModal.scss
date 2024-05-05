@@ -3,10 +3,10 @@
 .paxSelectorMainContainer{
     z-index: 100;
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 0px;
-    background-color: rgba(0,0,0,0.3);
-    min-height: 120vh;
+    background-color: rgba(0,0,0,0.7);
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
