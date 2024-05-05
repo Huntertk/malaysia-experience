@@ -1,6 +1,6 @@
-import BookingPlan from "../models/bookingPlans.js"
+const BookingPlan = require("../models/bookingPlans.js");
 
-export const addBookingPlan = async (req, res, next) => {
+exports.addBookingPlan = async (req, res, next) => {
     try {
         await BookingPlan.create(req.body)
         res.status(201).json({bookingPlan:"Created"})
@@ -9,10 +9,9 @@ export const addBookingPlan = async (req, res, next) => {
     }
 }
 
-
-export const getAllBookingPlan = async (req, res, next) => {
+exports.getAllBookingPlan = async (req, res, next) => {
     try {
-        const bookingPlan = await BookingPlan.find()
+        const bookingPlan = await BookingPlan.find({service: req.query.service})
         res.status(200).json({bookingPlan})
     } catch (error) {
         next(error)

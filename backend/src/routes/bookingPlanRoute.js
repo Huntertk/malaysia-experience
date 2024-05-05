@@ -1,10 +1,10 @@
-import { Router } from "express";
-import { addBookingPlan, getAllBookingPlan } from "../controllers/bookingPlanController.js";
-import { authAdmin } from "../middlewares/authMiddleware.js";
+const express = require("express");
+const { addBookingPlan, getAllBookingPlan } = require("../controllers/bookingPlanController.js");
+const { authAdmin } = require('../middlewares/authMiddleware.js');
 
-const router = Router()
+const router = express.Router()
 
 router.post('/createbookingplan', authAdmin, addBookingPlan)
 router.get('/getallbookingplan', getAllBookingPlan)
 
-export default router
+module.exports = router;

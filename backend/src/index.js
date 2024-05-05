@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 const cookieParser = require('cookie-parser');
 const adminRouter = require('./routes/adminRoute');
 const bookingRouter = require('./routes/bookingRoute');
+const bookingPlanRouter = require('./routes/bookingPlanRoute');
 
 const BlockedDateRouter = require('./routes/blockedDateRoutes');
 const errorHandlerMiddleware = require('./middlewares/errorHandleMiddleware');
@@ -22,6 +23,7 @@ app.use(cookieParser())
 //Routes
 app.use("/api/v1/booking", bookingRouter);
 app.use("/api/v1/admin", adminRouter);
+app.use('/api/v1/bookingplan', bookingPlanRouter)
 app.use("/api/v1/dates-manage/block-dates", BlockedDateRouter);
 
 
