@@ -13,6 +13,8 @@ import { splashManiaAdditionInfoData, splashManiaCardData, splashManiaHighlighht
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { initialRender } from '../../redux/features/bookingSlice';
+import { useGetBookingPlanDataQuery } from '../../redux/api/bookingPlanApi';
+import LoadingSpinner from '../../components/LoadingSpinner';
 
 const SplashMania = () => {
   const dispatch = useDispatch()
@@ -41,7 +43,7 @@ const SplashMania = () => {
           desc={"Travelvago is an authorized and trusted partner of the venue, offering curated experiences to enjoy this attraction."}
           imgUrl={"https://i.postimg.cc/BnSswGw4/splashmania-newtagline-2022-2.png"}
           />
-      <TourHomeCardContainer cardData={splashManiaCardData}  />
+      <TourHomeCardContainer cardData={data?.bookingPlan}  />
       <TourWhyVisit 
         whyVisitData={splashmaniaWhyVistData}
         serviceName={"Splash Mania"}

@@ -20,6 +20,8 @@ import {Helmet} from "react-helmet";
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { initialRender } from '../../redux/features/bookingSlice';
+import { useGetBookingPlanDataQuery } from '../../redux/api/bookingPlanApi';
+import LoadingSpinner from '../../components/LoadingSpinner';
 
 const ArasResturant = () => {
   const dispatch = useDispatch()
@@ -48,7 +50,7 @@ const ArasResturant = () => {
           desc={"Travelvago is an authorized and trusted partner of the venue, offering curated experiences to enjoy this attraction."}
           imgUrl={"https://i.postimg.cc/gcVBqRKf/17.jpg"}
           />
-       <TourHomeCardContainer cardData={arasResturantCardData}  />   
+       <TourHomeCardContainer cardData={data?.bookingPlan}  />   
 
        <TourWhyVisit 
         whyVisitData={arasResturantWhyVistData}
