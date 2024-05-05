@@ -1,13 +1,12 @@
 @use './variables.scss' as *;
 
-@use './variables.scss' as *;
 
 
 .bookingDateConfirmationMainContainer{
     max-width: $maxWidth;
     margin: 4rem auto;
     min-height: 100vh;
-    position: relative;
+    // position: relative;
     display: flex;
     flex-direction: column;
 
@@ -102,7 +101,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        position: relative;
+        // position: relative;
         margin-top: -1rem;
 
         .bookingDateWrapper {
