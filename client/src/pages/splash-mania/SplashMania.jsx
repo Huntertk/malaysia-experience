@@ -16,10 +16,18 @@ import { initialRender } from '../../redux/features/bookingSlice';
 
 const SplashMania = () => {
   const dispatch = useDispatch()
+  const {data, isLoading, error, isSuccess} = useGetBookingPlanDataQuery({service:"splash-mania"});
 
   useEffect(() => {
-    dispatch(initialRender())
-  },[])
+    dispatch(initialRender());
+    if(error){
+      toast.error("Something went wrong try again!")
+    }
+  },[]);
+
+  if(isLoading){
+    return <LoadingSpinner />
+  }
   return (
     <>
     {/*Dynamic Title */}

@@ -13,13 +13,24 @@ import { sunwayLagoonAdditionInfoData,  sunwayLagoonCardData, sunwayLagoonHighli
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { initialRender } from '../../redux/features/bookingSlice';
+import { useGetBookingPlanDataQuery } from '../../redux/api/bookingPlanApi';
+import LoadingSpinner from '../../components/LoadingSpinner';
+import toast from 'react-hot-toast';
 
 const SunwayLagoon = () => {
   const dispatch = useDispatch()
+  const {data, isLoading, error, isSuccess} = useGetBookingPlanDataQuery({service:"sunway-lagoon"});
 
   useEffect(() => {
-    dispatch(initialRender())
-  },[])
+    dispatch(initialRender());
+    if(error){
+      toast.error("Something went wrong try again!")
+    }
+  },[]);
+
+  if(isLoading){
+    return <LoadingSpinner />
+  }
   return (
     <>
     {/*Dynamic Title */}
@@ -33,7 +44,7 @@ const SunwayLagoon = () => {
           desc={"Travelvago is an authorized and trusted partner of the venue, offering curated experiences to enjoy this attraction."}
           imgUrl={"https://i.postimg.cc/SQ3jTkPk/1-1.jpg"}
           />
-      <TourHomeCardContainer cardData={sunwayLagoonCardData}  />
+      <TourHomeCardContainer cardData={data?.bookingPlan}  />
       <TourWhyVisit 
         whyVisitData={sunwayLagoonWhyVistData}
         serviceName={"Sunway Lagoon"}

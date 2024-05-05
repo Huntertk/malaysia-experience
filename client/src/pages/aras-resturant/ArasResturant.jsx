@@ -23,10 +23,18 @@ import { initialRender } from '../../redux/features/bookingSlice';
 
 const ArasResturant = () => {
   const dispatch = useDispatch()
+  const {data, isLoading, error, isSuccess} = useGetBookingPlanDataQuery({service:"aras-resturant"});
 
   useEffect(() => {
-    dispatch(initialRender())
-  },[])
+    dispatch(initialRender());
+    if(error){
+      toast.error("Something went wrong try again!")
+    }
+  },[]);
+
+  if(isLoading){
+    return <LoadingSpinner />
+  }
   return (
     <>
     {/*Dynamic Title */}
