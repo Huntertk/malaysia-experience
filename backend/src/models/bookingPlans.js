@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+const mongoose = require('mongoose')
 
 const bookingPlanSchema = new mongoose.Schema({
     title:{
@@ -10,34 +10,36 @@ const bookingPlanSchema = new mongoose.Schema({
     type:{
         type: String
     },
+    service:{
+        type: String
+    },
     image:{
         type:[String]
     },
-    pricing: {
-        malaysian:{
-            adult:{
-                type: Number
+    preference: [
+        {
+            title: String,
+            price:{
+                weekDays:{
+                    adult:Number,
+                    child:Number,
+                    senior:Number,
+                },
+                weekEnds:{
+                    adult:Number,
+                    child:Number,
+                    senior:Number,
+                }
             },
-            child:{
-                type: Number
-            },
-            senior:{
-                type: Number
-            },
-        },
-        nonMalaysian:{
-            adult:{
-                type: Number
-            },
-            child:{
-                type: Number
-            },
-            senior:{
-                type: Number
-            },
+            details:[String]
         }
-    },
+    ],
+    inclusionAndExclusion:{
+        cancellationPolicy:[String],
+        inclusion:[String],
+        exclusion:[String]
+    }
 }, {timestamps: true})
 
-const BookingPlan = mongoose.model('bookingPlan', bookingPlanSchema)
-export default BookingPlan
+const BookingPlan = mongoose.model('BookingPlan', bookingPlanSchema)
+module.exports = BookingPlan
