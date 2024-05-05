@@ -6,6 +6,7 @@ const AppError = require("../error/customError");
 
 const getAdminData = async (req, res, next) => {
     try {
+        
         res.status(200).json({
             admin: req.admin
         })

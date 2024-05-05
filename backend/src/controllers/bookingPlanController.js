@@ -1,3 +1,4 @@
+const AppError = require("../error/customError.js");
 const BookingPlan = require("../models/bookingPlans.js");
 
 exports.addBookingPlan = async (req, res, next) => {
@@ -12,6 +13,9 @@ exports.addBookingPlan = async (req, res, next) => {
 exports.getAllBookingPlan = async (req, res, next) => {
     try {
         const bookingPlan = await BookingPlan.find({service: req.query.service})
+        if(bookingPlan.length < 1){
+            return next(new AppError("Data not found", 400))
+        }
         res.status(200).json({bookingPlan})
     } catch (error) {
         next(error)

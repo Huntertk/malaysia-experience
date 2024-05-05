@@ -49,7 +49,7 @@ const App = () => {
                   <SplashMania />
                 ) :  window.location.hostname === 'malaysia-experience.onrender.com' ? (
                   <ArasResturant />
-                ) : <>404</>
+                ) : <NotFound />
               } 
             />
                 
