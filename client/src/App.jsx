@@ -46,7 +46,7 @@ const App = () => {
                 ) : window.location.hostname === 'splashmania.malaysia-experience.com' ? (
                   <SplashMania />
                 ) : window.location.hostname === 'sunwaylagoon.malaysia-experience.com' ? (
-                  <SplashMania />
+                  <SunwayLagoon />
                 ) :  window.location.hostname === 'malaysia-experience.onrender.com' ? (
                   <ArasResturant />
                 ) : <NotFound />
