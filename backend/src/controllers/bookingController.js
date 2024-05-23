@@ -56,9 +56,11 @@ const createBooking = async (req, res) => {
                 },
             ],
             mode: 'payment',
-            // success_url: `https://${hostName}/${responseClientUrl}`,
-            success_url: `http://${hostName}:3000/payment?verify=true&id=${booking._id}`,
-            cancel_url: `http://${hostName}:3000/payment?verify=false`,
+            success_url: `https://${hostName}/payment?verify=true&id=${booking._id}`,
+            cancel_url: `https://${hostName}/payment?verify=false`,
+
+            // success_url: `http://${hostName}:3000/payment?verify=true&id=${booking._id}`,
+            // cancel_url: `http://${hostName}:3000/payment?verify=false`,
             payment_intent_data: {
                 setup_future_usage: 'off_session',
                 description: 'Booking payment',
@@ -92,7 +94,6 @@ const createBooking = async (req, res) => {
 }
 
 const successBooking = async (req, res, next) => {
-    console.log(req.query);
     if(req.query.verify === false || !req.query.id){
         return res.redirect("/failed")
     }
