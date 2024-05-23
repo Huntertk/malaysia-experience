@@ -51,7 +51,8 @@ const bookingSchema = new mongoose.Schema({
     payment:{
         type:Boolean,
         default: false
-    }
+    },
+    successToken:String
 },{timestamps: true})
 
 
