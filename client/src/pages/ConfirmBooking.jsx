@@ -31,7 +31,6 @@ const ConfirmBooking = () => {
           <h3><span>Total Amount: </span> <span>MYR {totalAmount}</span></h3>
           <h3><span>Date: </span> <span> {format(bookingDate, 'PPP')}</span></h3> */}
           <h3>Check Your Email</h3>
-          <h3>More Details Check Your Email</h3>
         </div>
       <button className='btn' onClick={() => {
         dispatch(bookingConfirm())

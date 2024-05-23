@@ -24,8 +24,9 @@ import SunwayLagoonBookTypeOneDate from "./admin/sunwayLagoon/SunwayLagoonBookTy
 import SunwayLagoonBookTypeThreeDate from "./admin/sunwayLagoon/SunwayLagoonBookTypeThreeDate";
 import SunwayLagoonBookTypeTwoDate from "./admin/sunwayLagoon/SunwayLagoonBookTypeTwoDate";
 import SunwayLagoonDateManage from "./admin/sunwayLagoon/SunwayLagoonDateManage";
-
+import BookingFailed from "./BookingFailed";
 export {
+    BookingFailed,
     SunwayLagoonDateManage,
     SunwayLagoonBookTypeOneDate,
     SunwayLagoonBookTypeTwoDate,

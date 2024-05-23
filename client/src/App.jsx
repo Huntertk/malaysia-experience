@@ -6,6 +6,7 @@ import {
   ArasResturantBookTypeOneDate,
   ArasResturantBookTypeTwoDate,
   ArasResturantDateManage,
+  BookingFailed,
   CompanyDetails,
   ConfirmBooking,
   HelpCenter,
@@ -58,6 +59,7 @@ const App = () => {
                 {/* <Route path={`/${responseClientUrl}`} element={<PaymentSucess />} /> */}
                 {/* <Route path="/bookingconfirm" element={<ConfirmBooking />} /> */}
                 <Route path={`/success`} element={<ConfirmBooking />} />
+                <Route path={`/failed`} element={<BookingFailed />} />
                 <Route path="/terms" element={<TermAndConditionPage />} />
                 <Route path="/privacypolicy" element={<PrivacyPolicy />} />
                 <Route path="/companydetails" element={<CompanyDetails />} />
