@@ -102,7 +102,7 @@ const successBooking = async (req, res, next) => {
         if(!booking){
             return next(new AppError("Booking not created"))
         }
-        await Booking.findByIdAndUpdate(req.query.id, {payment:true, bookingStatus:"confirmed", successToken:  crypto.randomBytes(16).toString('hex')})
+        const newBooking = await Booking.findByIdAndUpdate(req.query.id, {payment:true, bookingStatus:"confirmed", successToken:  crypto.randomBytes(16).toString('hex')})
 
     const imgUrls = booking.service === 'splash-mania' ? {bannerImg:"https://i.postimg.cc/15PZfQSw/Splash-Mania-Waterpark-Ticketin-Gamuda-Cove-Selangor-Klook-Malaysia.jpg", productImg: "https://i.postimg.cc/BnSswGw4/splashmania-newtagline-2022-2.png"} : booking.service === 'aras-resturant' ? {bannerImg:"https://i.postimg.cc/DzNRHTWH/6.jpg", productImg: "https://i.postimg.cc/5yggcB7y/IMG-20240129-WA0076.jpg"}  : booking.service === 'sunway-lagoon' && {bannerImg:"https://i.postimg.cc/SQ3jTkPk/1-1.jpg", productImg: "https://i.postimg.cc/qqhqJ5zP/5.jpg"} 
 
@@ -132,7 +132,7 @@ const successBooking = async (req, res, next) => {
                 console.log(info.response, " Email sent");
             }
         })
-        res.status(StatusCodes.CREATED).redirect("/success")
+        res.status(StatusCodes.CREATED).redirect(`/success?token=${newBooking.successToken}`)
     } catch (error) {
         res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ error })
     }
