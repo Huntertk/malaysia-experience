@@ -18,8 +18,18 @@ export const bookingDataApi = createApi({
                 }
             },
         }),
+        getSuccessBookingData: builder.query({
+            query:(params) => {
+                return{
+                    url: '/booking/success',
+                    params:{
+                        token:params.token
+                    }
+                }
+            },
+        }),
     })
 })
 
 
-export const {useGetBookingDataQuery} = bookingDataApi
+export const {useGetBookingDataQuery, useGetSuccessBookingDataQuery} = bookingDataApi

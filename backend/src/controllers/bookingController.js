@@ -250,12 +250,12 @@ const getSuccessBookingDetails = async(req, res, next) => {
     try {
         const token = req.query.token;
         if(!token){
-            return res.redirect("/")
+            return res.status(400).json({message: "No Booking Found"})
         }
         let booking = await Booking.findOne({successToken: token});
 
         if(!booking){
-            return res.redirect("/")
+            return res.status(400).json({message: "No Booking Found"})
         }
         booking.successToken = undefined
         await booking.save();
