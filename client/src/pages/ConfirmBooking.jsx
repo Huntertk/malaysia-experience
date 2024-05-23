@@ -20,7 +20,6 @@ const ConfirmBooking = () => {
   if(!data){
     return <Navigate to="/" />
   }
-  console.log(data);
   return (
     <section className="paymentSuccessPage">
       <div className='content'>
