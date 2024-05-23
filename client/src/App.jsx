@@ -49,14 +49,15 @@ const App = () => {
                   <SunwayLagoon />
                 ) :  window.location.hostname === 'malaysia-experience.onrender.com' ? (
                   <ArasResturant />
-                ) : <NotFound />
+                ) : <ArasResturant />
               } 
             />
                 
                 <Route path='/date-select' element={<DateSelectionContainer />} />
                 <Route path='/booking' element={<Booking />} />
-                <Route path={`/${responseClientUrl}`} element={<PaymentSucess />} />
-                <Route path="/bookingconfirm" element={<ConfirmBooking />} />
+                {/* <Route path={`/${responseClientUrl}`} element={<PaymentSucess />} /> */}
+                {/* <Route path="/bookingconfirm" element={<ConfirmBooking />} /> */}
+                <Route path={`/success`} element={<ConfirmBooking />} />
                 <Route path="/terms" element={<TermAndConditionPage />} />
                 <Route path="/privacypolicy" element={<PrivacyPolicy />} />
                 <Route path="/companydetails" element={<CompanyDetails />} />

@@ -53,7 +53,7 @@ const Booking = () => {
                 bookingTitle,
                 bookingType: type,
                 responseClientUrl,
-                pref,
+                prefrence:pref,
                 service,
                 hostName
             })
