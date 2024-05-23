@@ -6,9 +6,8 @@ const { authAdmin } =  require("../middlewares/authMiddleware.js");
 const router = Router();
 
 router.post("/", createBooking)
-router.get("/payment", successBooking)
 router.get("/", 
-        // authAdmin, 
+        authAdmin, 
         getAllBooking
     )
 router.get("/totalbooking", getTotalBookingCount)

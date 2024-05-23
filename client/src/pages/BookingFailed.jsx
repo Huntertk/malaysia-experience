@@ -8,7 +8,7 @@ const BookingFailed = () => {
         <div className='bookingConfirmationDetails'>
           <h3>Payment Failed</h3>
         </div>
-      <button className='btn'>Go Home</button>
+      <a href="/" className='btn'>Go Home</a>
       </div>
     </section>
   )
