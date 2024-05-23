@@ -25,6 +25,7 @@ const BookingCard = (props) => {
         bookingId,
         bookingTitle,
         prefrence,
+        payment
     }  = props.booking
 
 
@@ -42,9 +43,10 @@ const BookingCard = (props) => {
     <div className="cardContainer">
       <div className='cardTopStatusContent'>
         <span>{props.index + 1} </span>
-        <span>#{bookingStatus}</span>
+        <span className={payment === false ? "payment-fail": ""}>#{bookingStatus}</span>
       </div>
         <span>Booking ID: #{bookingId}</span>
+        <span>Payment: <span className={payment === false ? "payment-fail": ""}>{payment ? "complete" : "not complete"}</span></span>
         <span>Order ID: {_id}</span>
           <p>Date of Reservation : {format(bookingDate, 'PPP')}</p>
           <p>Reservation-Type : {bookingTitle}</p>
@@ -61,6 +63,7 @@ const BookingCard = (props) => {
             <span>Booking Status : </span>
             <select onChange={(e) => setNewBookingStatus(e.target.value)}>
               <option value={bookingStatus}>{bookingStatus}</option>
+              <option value={"payment not verified"}>payment not verified</option>
               <option value={"confirmed"}>confirmed</option>
               <option value={"completed"}>completed</option>
               <option value={"cancelled"}>cancelled</option>

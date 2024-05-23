@@ -5,6 +5,7 @@ export const bookingDataApi = createApi({
     baseQuery: fetchBaseQuery({
         baseUrl:"/api/v1"
     }),
+    keepUnusedDataFor:30,
     endpoints: (builder) => ({
         getBookingData: builder.query({
             query:(params) => {
