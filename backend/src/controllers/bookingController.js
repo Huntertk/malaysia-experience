@@ -246,6 +246,25 @@ const updateBooking = async (req, res, next) => {
     }
 }
 
+const getSuccessBookingDetails = async(req, res, next) => {
+    try {
+        const token = req.query.token;
+        if(!token){
+            return res.redirect("/")
+        }
+        let booking = await Booking.findOne({successToken: token});
+
+        if(!booking){
+            return res.redirect("/")
+        }
+        booking.successToken = undefined
+        await booking.save();
+        res.status(200).json(booking)
+    } catch (error) {
+        
+    }
+}
+
 
 module.exports = {
     updateBooking,
@@ -256,5 +275,6 @@ module.exports = {
     getAllBooking,
     successBooking,
     createBooking,
-    getConfirmedBooking
+    getConfirmedBooking,
+    getSuccessBookingDetails
 }
