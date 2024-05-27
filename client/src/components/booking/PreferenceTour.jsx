@@ -3,10 +3,15 @@ import {useDispatch, useSelector} from 'react-redux'
 import { countTotalBookingAmount, setPreference } from '../../redux/features/bookingSlice'
 
 
-const CardData = ({cardData}) => {
+const CardData = ({cardData, day}) => {
     const {pref}  = useSelector(state => state.booking);
     const dispatch = useDispatch()
-    let price = cardData.price.weekDays.adult || cardData.price.weekEnds.adult;
+    let price;
+    if(day === 'Fri' || day === 'Sat' || day === 'Sun'){
+        price = cardData.price.weekEnds.adult;
+    } else {
+        price = cardData.price.weekDays.adult
+    }
     
     return (
         <div className="prefrenceTabCard">
@@ -37,7 +42,7 @@ const PreferenceTour = ({data, selectedDate}) => {
         <div className="prefrenceTabCardContainer">
             {
                 data.map((d, index) => (
-                    <CardData key={index} cardData={d} />
+                    <CardData key={index} cardData={d} day={day} />
                 ))
             }
             
