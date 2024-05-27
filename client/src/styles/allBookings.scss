@@ -14,6 +14,29 @@
         padding: 1rem;
 
     }
+
+    .bookingFilterTabContainer{
+        margin: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+
+        button{
+            padding: 10px 1rem;
+            font-size: 1.1rem;
+            background-color: $primaryModalColor;
+            color: $primary;
+            border: 2px solid $primary;
+            border-radius: 10px;
+        }
+        .activeTab{
+            background-color: $primary;
+            color: #fff;
+        }
+
+    }
 }
 .allBookingsContainer{
     display: flex;

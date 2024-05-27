@@ -158,6 +158,12 @@ const getAllBooking = async (req, res, next) => {
             query = query.find({service}).sort({ createdAt: -1 })
         }
 
+        if(req.query.bookingStatus){
+            const bookingStatus = req.query.bookingStatus || "confirmed"
+            query = query.find({bookingStatus}).sort({ createdAt: -1 })
+        }
+
+        
         //PAGINATION
         const page = req.query.page * 1  || 1;
         const limit = 100;

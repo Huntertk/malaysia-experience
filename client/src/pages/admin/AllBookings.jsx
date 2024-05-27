@@ -13,26 +13,18 @@ import CustomPagination from '../../components/admin/CustomPagination';
 const AllBookings = () => {
   const {updateBookingStatus, allBookings} = useSelector(state => state.bookingDetails)
   const dispatch = useDispatch()
+  const [tabSection, setTabSection] = useState("confirmed");
   const [option, setOption] = useState("")
   const [searchParams] = useSearchParams()
   const page = searchParams.get('page') || 1; 
   const service = option;
   const params = {
     page,
-    service
+    service,
+    bookingStatus: tabSection
 }
   const {data, isLoading, error, isSuccess} = useGetBookingDataQuery(params);
-  // const getAllBookings = async () => {
-  //   try {
-  //     dispatch(getBookingStart())
-  //     const res = await axios.get("/api/v1/booking")
-  //     dispatch(getAllBookingSuccess(res.data.allBookings))
-      
-  //   } catch (error) {
-  //     console.log(error);
-      
-  //   }
-  // }
+
 
   useEffect(() => {
     if(error){
@@ -58,6 +50,23 @@ const AllBookings = () => {
                 <option value={"splash-mania"}>Splash Mania</option>
                 <option value={"sunway-lagoon"}>Sunway Lagoon</option>
           </select>
+          <div className="bookingFilterTabContainer">
+            <button 
+            onClick={() => setTabSection("confirmed")}
+            className={tabSection === 'confirmed' ? 'activeTab' : ''}>Confirmed</button>
+            <button 
+            onClick={() => setTabSection("payment not verified")}
+            className={tabSection === 'payment not verified' ? 'activeTab' : ''}>Payment Not Verified</button>
+            <button 
+            onClick={() => setTabSection("cancelled")}
+            className={tabSection === 'cancelled' ? 'activeTab' : ''}>Cancelled</button>
+            <button 
+            onClick={() => setTabSection("completed")}
+            className={tabSection === 'completed' ? 'activeTab' : ''}>Completed</button>
+            <button 
+            onClick={() => setTabSection("pending")}
+            className={tabSection === 'pending' ? 'activeTab' : ''}>Pending</button>
+          </div>
         </div>
         {
           data?.allBookings.length === 0 ? <h1>No Bookings Now</h1> : (
@@ -69,7 +78,7 @@ const AllBookings = () => {
           )
         }
         
-      <div className="paginationMainContainer">
+        <div className="paginationMainContainer">
             <CustomPagination page={page} pages={data?.pages} />
           </div>
         </>

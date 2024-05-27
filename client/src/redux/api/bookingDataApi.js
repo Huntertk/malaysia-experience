@@ -13,7 +13,8 @@ export const bookingDataApi = createApi({
                     url: '/booking',
                     params:{
                         "service":params.service,
-                        "page":params.page
+                        "page":params.page,
+                        "bookingStatus":params.bookingStatus
                     }
                 }
             },
