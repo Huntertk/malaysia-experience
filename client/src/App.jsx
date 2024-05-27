@@ -49,7 +49,7 @@ const App = () => {
                 ) : window.location.hostname === 'sunwaylagoon.malaysia-experience.com' ? (
                   <SunwayLagoon />
                 ) :  window.location.hostname === 'malaysia-experience.onrender.com' ? (
-                  <ArasResturant />
+                  <SplashMania />
                 ) : <SplashMania />
               } 
             />
