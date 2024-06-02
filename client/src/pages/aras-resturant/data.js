@@ -203,7 +203,8 @@ export const arasResturantAdditionInfoData = [
         ques:"Operating Hours ?",
         ans:[
             "Hi-Tea: 3pm to 5:30pm",
-            "Dinner: 6:30pm to 10pm"
+            "Dinner: 6:30pm to 10pm",
+            "Lunch: 11:30am to 2:30pm"
         ]
     },
     {
